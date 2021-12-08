@@ -1,0 +1,101 @@
+{
+  "arch": "x86_64",
+  "build": "py38_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/private/home/itayitzhak/.conda/pkgs/catalogue-1.0.0-py38_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/catalogue.cpython-38.pyc",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/zip-safe",
+    "lib/python3.8/site-packages/catalogue.py"
+  ],
+  "fn": "catalogue-1.0.0-py38_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/private/home/itayitzhak/.conda/pkgs/catalogue-1.0.0-py38_1",
+    "type": 1
+  },
+  "md5": "6c87b5e393ea0d6818a832c75d9d0740",
+  "name": "catalogue",
+  "package_tarball_full_path": "/private/home/itayitzhak/.conda/pkgs/catalogue-1.0.0-py38_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/catalogue.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "9557fa19d58352ed7009c49be007c750e8b83bc616f99791eab30df87e62062d",
+        "sha256_in_prefix": "9557fa19d58352ed7009c49be007c750e8b83bc616f99791eab30df87e62062d",
+        "size_in_bytes": 7282
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "fcdc40468c2eca2200ff1ea82a038e33876b7bb19a7da2b15f3ccd4faa000390",
+        "sha256_in_prefix": "fcdc40468c2eca2200ff1ea82a038e33876b7bb19a7da2b15f3ccd4faa000390",
+        "size_in_bytes": 13165
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "0e7a791c38ee4941269c5fbc5e75d5381bbc70bedb5c146484535b97c7674543",
+        "sha256_in_prefix": "0e7a791c38ee4941269c5fbc5e75d5381bbc70bedb5c146484535b97c7674543",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046",
+        "sha256_in_prefix": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "bf4173c07258f24932edfdddb83255aa3d33ddd09b06d7b70b1d712cf03faa7e",
+        "sha256_in_prefix": "bf4173c07258f24932edfdddb83255aa3d33ddd09b06d7b70b1d712cf03faa7e",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue-1.0.0.dist-info/zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.8/site-packages/catalogue.py",
+        "path_type": "hardlink",
+        "sha256": "538860b93e9da7b75d5eec396c0767cbb87f450a783722c816ea727cd260bbc5",
+        "sha256_in_prefix": "538860b93e9da7b75d5eec396c0767cbb87f450a783722c816ea727cd260bbc5",
+        "size_in_bytes": 7070
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "None",
+  "size": 15273,
+  "subdir": "linux-64",
+  "timestamp": 1590154504705,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/catalogue-1.0.0-py38_1.tar.bz2",
+  "version": "1.0.0"
+}

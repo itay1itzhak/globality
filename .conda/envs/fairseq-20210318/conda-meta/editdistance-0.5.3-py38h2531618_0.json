@@ -1,0 +1,135 @@
+{
+  "arch": "x86_64",
+  "build": "py38h2531618_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/private/home/itayitzhak/.conda/pkgs/editdistance-0.5.3-py38h2531618_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/editdistance/__init__.py",
+    "lib/python3.8/site-packages/editdistance/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/editdistance/_editdistance.h",
+    "lib/python3.8/site-packages/editdistance/bycython.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/editdistance/def.h"
+  ],
+  "fn": "editdistance-0.5.3-py38h2531618_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/private/home/itayitzhak/.conda/pkgs/editdistance-0.5.3-py38h2531618_0",
+    "type": 1
+  },
+  "md5": "0d981a69e2bcd8c92b6c8c135a5da0e5",
+  "name": "editdistance",
+  "package_tarball_full_path": "/private/home/itayitzhak/.conda/pkgs/editdistance-0.5.3-py38h2531618_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "a87fc3b34b5ff16dada42efb922b2a63e29623e54fa426165b12a82b8d8df25e",
+        "sha256_in_prefix": "a87fc3b34b5ff16dada42efb922b2a63e29623e54fa426165b12a82b8d8df25e",
+        "size_in_bytes": 473
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "09709721b8405417732ca4de77381a5a61b06e0f2afb26b9cfa0af7e540c9506",
+        "sha256_in_prefix": "09709721b8405417732ca4de77381a5a61b06e0f2afb26b9cfa0af7e540c9506",
+        "size_in_bytes": 1012
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "6ea5af29ef1a1379f770c7cdb0cbdbef91f5df7c7d5da376aedf81b57662ae38",
+        "sha256_in_prefix": "6ea5af29ef1a1379f770c7cdb0cbdbef91f5df7c7d5da376aedf81b57662ae38",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8174848c9007877d1ebadf9fcca91bd8866fafd04129cc359a22ef3ef8830f5d",
+        "sha256_in_prefix": "8174848c9007877d1ebadf9fcca91bd8866fafd04129cc359a22ef3ef8830f5d",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance-0.5.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "602c66cccd94598e2f17a8d1b6d1d4d1278ee1b4e4875887f0f4451a71e4dba5",
+        "sha256_in_prefix": "602c66cccd94598e2f17a8d1b6d1d4d1278ee1b4e4875887f0f4451a71e4dba5",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "87302af95fbdacc35c5af104481fcf244cd53c5fe66c04d408b220556048a65e",
+        "sha256_in_prefix": "87302af95fbdacc35c5af104481fcf244cd53c5fe66c04d408b220556048a65e",
+        "size_in_bytes": 154
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "b336be8799c48d8bc322318fe8661d67dbc011cef773a041a5d4a99411bea278",
+        "sha256_in_prefix": "b336be8799c48d8bc322318fe8661d67dbc011cef773a041a5d4a99411bea278",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance/_editdistance.h",
+        "path_type": "hardlink",
+        "sha256": "c73fe1be7e599cbe850ae2a2f60ecf21e466a067907daf6da5763f315c56c25a",
+        "sha256_in_prefix": "c73fe1be7e599cbe850ae2a2f60ecf21e466a067907daf6da5763f315c56c25a",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance/bycython.cpython-38-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "76c529df374bb5e04bf5d42c9b09d87306e079c04375e7e723d8869648125eb2",
+        "sha256_in_prefix": "76c529df374bb5e04bf5d42c9b09d87306e079c04375e7e723d8869648125eb2",
+        "size_in_bytes": 84464
+      },
+      {
+        "_path": "lib/python3.8/site-packages/editdistance/def.h",
+        "path_type": "hardlink",
+        "sha256": "8dca467a4c0901bbb9cb6c7a714027c048b72b76d99511c689e3bb835de7ec21",
+        "sha256_in_prefix": "8dca467a4c0901bbb9cb6c7a714027c048b72b76d99511c689e3bb835de7ec21",
+        "size_in_bytes": 256
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "editdistance",
+  "size": 30026,
+  "subdir": "linux-64",
+  "timestamp": 1605215860816,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/editdistance-0.5.3-py38h2531618_0.tar.bz2",
+  "version": "0.5.3"
+}

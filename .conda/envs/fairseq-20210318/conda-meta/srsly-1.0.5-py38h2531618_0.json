@@ -1,0 +1,903 @@
+{
+  "arch": "x86_64",
+  "build": "py38h2531618_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/private/home/itayitzhak/.conda/pkgs/srsly-1.0.5-py38h2531618_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/LICENSE",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/METADATA",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/RECORD",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/WHEEL",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/srsly-1.0.5.dist-info/zip-safe",
+    "lib/python3.8/site-packages/srsly/__init__.py",
+    "lib/python3.8/site-packages/srsly/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/__pycache__/_json_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/__pycache__/_msgpack_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/__pycache__/_pickle_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/__pycache__/about.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/__pycache__/util.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/_json_api.py",
+    "lib/python3.8/site-packages/srsly/_msgpack_api.py",
+    "lib/python3.8/site-packages/srsly/_pickle_api.py",
+    "lib/python3.8/site-packages/srsly/about.py",
+    "lib/python3.8/site-packages/srsly/cloudpickle/__init__.py",
+    "lib/python3.8/site-packages/srsly/cloudpickle/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/cloudpickle/__pycache__/cloudpickle.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/cloudpickle/cloudpickle.py",
+    "lib/python3.8/site-packages/srsly/msgpack/__init__.py",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_ext_type.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_msgpack_numpy.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/__pycache__/util.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/msgpack/_ext_type.py",
+    "lib/python3.8/site-packages/srsly/msgpack/_msgpack_numpy.py",
+    "lib/python3.8/site-packages/srsly/msgpack/_packer.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/srsly/msgpack/_packer.pyx",
+    "lib/python3.8/site-packages/srsly/msgpack/_unpacker.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/srsly/msgpack/_unpacker.pyx",
+    "lib/python3.8/site-packages/srsly/msgpack/_version.py",
+    "lib/python3.8/site-packages/srsly/msgpack/buff_converter.h",
+    "lib/python3.8/site-packages/srsly/msgpack/exceptions.py",
+    "lib/python3.8/site-packages/srsly/msgpack/pack.h",
+    "lib/python3.8/site-packages/srsly/msgpack/pack_template.h",
+    "lib/python3.8/site-packages/srsly/msgpack/sysdep.h",
+    "lib/python3.8/site-packages/srsly/msgpack/unpack.h",
+    "lib/python3.8/site-packages/srsly/msgpack/unpack_define.h",
+    "lib/python3.8/site-packages/srsly/msgpack/unpack_template.h",
+    "lib/python3.8/site-packages/srsly/msgpack/util.py",
+    "lib/python3.8/site-packages/srsly/tests/__init__.py",
+    "lib/python3.8/site-packages/srsly/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/__pycache__/test_json_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/__pycache__/test_msgpack_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/__pycache__/test_pickle_api.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/__init__.py",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/cloudpickle_file_test.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/testutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/cloudpickle_file_test.py",
+    "lib/python3.8/site-packages/srsly/tests/cloudpickle/testutils.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__init__.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_buffer.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_case.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_except.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_extension.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_format.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_limits.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_memoryview.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_newspec.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_numpy.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_pack.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_read_size.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_seq.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_sequnpack.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_stricttype.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_subtype.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_unpack.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_buffer.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_case.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_except.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_extension.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_format.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_limits.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_memoryview.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_newspec.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_numpy.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_pack.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_read_size.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_seq.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_sequnpack.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_stricttype.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_subtype.py",
+    "lib/python3.8/site-packages/srsly/tests/msgpack/test_unpack.py",
+    "lib/python3.8/site-packages/srsly/tests/test_json_api.py",
+    "lib/python3.8/site-packages/srsly/tests/test_msgpack_api.py",
+    "lib/python3.8/site-packages/srsly/tests/test_pickle_api.py",
+    "lib/python3.8/site-packages/srsly/tests/ujson/__init__.py",
+    "lib/python3.8/site-packages/srsly/tests/ujson/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/ujson/__pycache__/test_ujson.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/tests/ujson/test_ujson.py",
+    "lib/python3.8/site-packages/srsly/ujson/JSONtoObj.c",
+    "lib/python3.8/site-packages/srsly/ujson/__init__.py",
+    "lib/python3.8/site-packages/srsly/ujson/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/srsly/ujson/objToJSON.c",
+    "lib/python3.8/site-packages/srsly/ujson/py_defines.h",
+    "lib/python3.8/site-packages/srsly/ujson/ujson.c",
+    "lib/python3.8/site-packages/srsly/ujson/ujson.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/srsly/ujson/version.h",
+    "lib/python3.8/site-packages/srsly/util.py"
+  ],
+  "fn": "srsly-1.0.5-py38h2531618_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/private/home/itayitzhak/.conda/pkgs/srsly-1.0.5-py38h2531618_0",
+    "type": 1
+  },
+  "md5": "114947cf5842fc88abda10df8f1c0cb0",
+  "name": "srsly",
+  "package_tarball_full_path": "/private/home/itayitzhak/.conda/pkgs/srsly-1.0.5-py38h2531618_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "6c9e9291cb685579e05a3f76c776cc5dee1ebd89d6823b93d5f875b96e4e5f11",
+        "sha256_in_prefix": "6c9e9291cb685579e05a3f76c776cc5dee1ebd89d6823b93d5f875b96e4e5f11",
+        "size_in_bytes": 1103
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f7455d1a38b17e57fb518f6eda431d83915a8da9a85520ce6c8f666353607d1b",
+        "sha256_in_prefix": "f7455d1a38b17e57fb518f6eda431d83915a8da9a85520ce6c8f666353607d1b",
+        "size_in_bytes": 14036
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "6823cf0a228d8de215454b0e682e4261c0ee42211b05204e90d4432fe1526b31",
+        "sha256_in_prefix": "6823cf0a228d8de215454b0e682e4261c0ee42211b05204e90d4432fe1526b31",
+        "size_in_bytes": 8165
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ce2c5e9a07c9963ce667bb229c94c9669ea5e319f5b4103ac05d6bc81c68d275",
+        "sha256_in_prefix": "ce2c5e9a07c9963ce667bb229c94c9669ea5e319f5b4103ac05d6bc81c68d275",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "45b7d07f9efe5346540e4da794d72a965ef6189530d78073a40b550f49511590",
+        "sha256_in_prefix": "45b7d07f9efe5346540e4da794d72a965ef6189530d78073a40b550f49511590",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4d785aced296163b862a54c5349712c0342460dd042c7aa88416bd02ba4ad2e2",
+        "sha256_in_prefix": "4d785aced296163b862a54c5349712c0342460dd042c7aa88416bd02ba4ad2e2",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly-1.0.5.dist-info/zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "96f4900f2f2fc9cae85a40675963c3858fef89225babe8fe62e355f66d810478",
+        "sha256_in_prefix": "96f4900f2f2fc9cae85a40675963c3858fef89225babe8fe62e355f66d810478",
+        "size_in_bytes": 363
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "a73657fc2b3f93e40851d446d694059395396dd99108449d19bc2480ff422143",
+        "sha256_in_prefix": "a73657fc2b3f93e40851d446d694059395396dd99108449d19bc2480ff422143",
+        "size_in_bytes": 627
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/_json_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "fb2de598b4b7cdb84d5bd768e50a6f2292d41f5249a4fa8568c5fb9cdb7548c7",
+        "sha256_in_prefix": "fb2de598b4b7cdb84d5bd768e50a6f2292d41f5249a4fa8568c5fb9cdb7548c7",
+        "size_in_bytes": 5142
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/_msgpack_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "cefddcdcdd651241a2e611d95a4976c7b289cb877af7a87a4b3e301ec72ec067",
+        "sha256_in_prefix": "cefddcdcdd651241a2e611d95a4976c7b289cb877af7a87a4b3e301ec72ec067",
+        "size_in_bytes": 1851
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/_pickle_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "fcb77a1c36c02a8062c0e0dde8af1cff567b0007c34cbf423b738f1884e4e1bf",
+        "sha256_in_prefix": "fcb77a1c36c02a8062c0e0dde8af1cff567b0007c34cbf423b738f1884e4e1bf",
+        "size_in_bytes": 809
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/about.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "67900f2367416a2ae8e0c618b5dae5968e59ace1da924cbb00fd656d480e285f",
+        "sha256_in_prefix": "67900f2367416a2ae8e0c618b5dae5968e59ace1da924cbb00fd656d480e285f",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/__pycache__/util.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "7fe0336eedf11cd5a4a538c5885c554fce2905ed67d29e9ed8ba982c8aa5dca9",
+        "sha256_in_prefix": "7fe0336eedf11cd5a4a538c5885c554fce2905ed67d29e9ed8ba982c8aa5dca9",
+        "size_in_bytes": 822
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/_json_api.py",
+        "path_type": "hardlink",
+        "sha256": "b2cd00e70946ffcae412dc27aa157222ef31d87f3a18a33032a6438914bf68f8",
+        "sha256_in_prefix": "b2cd00e70946ffcae412dc27aa157222ef31d87f3a18a33032a6438914bf68f8",
+        "size_in_bytes": 5230
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/_msgpack_api.py",
+        "path_type": "hardlink",
+        "sha256": "45d4454c855b1957d386f879b774eaa2cc8db61d8905099fe94f3bace38ec3a5",
+        "sha256_in_prefix": "45d4454c855b1957d386f879b774eaa2cc8db61d8905099fe94f3bace38ec3a5",
+        "size_in_bytes": 1677
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/_pickle_api.py",
+        "path_type": "hardlink",
+        "sha256": "7d2c9ad38dfeb1ca36fbb9d2f064d39846e98dab8e2a11b77bf864f03cfce7c1",
+        "sha256_in_prefix": "7d2c9ad38dfeb1ca36fbb9d2f064d39846e98dab8e2a11b77bf864f03cfce7c1",
+        "size_in_bytes": 561
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/about.py",
+        "path_type": "hardlink",
+        "sha256": "89e8553850c550e16fe4c7d3696dc8ed8c728572a35bcb1fa57ebf310dc8493b",
+        "sha256_in_prefix": "89e8553850c550e16fe4c7d3696dc8ed8c728572a35bcb1fa57ebf310dc8493b",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/cloudpickle/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a2106972b50559104290b3c1a02e3c484884b1c4db5e55e5e815e5e5f3fd28aa",
+        "sha256_in_prefix": "a2106972b50559104290b3c1a02e3c484884b1c4db5e55e5e815e5e5f3fd28aa",
+        "size_in_bytes": 50
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/cloudpickle/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "3042dd6b3c76738b3340045d04900c76e00166701ae31cfdd3e0d59b7fccf43e",
+        "sha256_in_prefix": "3042dd6b3c76738b3340045d04900c76e00166701ae31cfdd3e0d59b7fccf43e",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/cloudpickle/__pycache__/cloudpickle.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "f743fc72ab58aaad9a01dde1172ece0ccfb7390a8b515ea87708733fa2bc6526",
+        "sha256_in_prefix": "f743fc72ab58aaad9a01dde1172ece0ccfb7390a8b515ea87708733fa2bc6526",
+        "size_in_bytes": 36209
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/cloudpickle/cloudpickle.py",
+        "path_type": "hardlink",
+        "sha256": "7005308117163a9d2ea794b83b6d5880287113b27391105661a39c2b720a6a81",
+        "sha256_in_prefix": "7005308117163a9d2ea794b83b6d5880287113b27391105661a39c2b720a6a81",
+        "size_in_bytes": 52157
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "cb58c2727de62e59524758ca69c94283fe7cb3f1fa20dc495c03de3916c5ae76",
+        "sha256_in_prefix": "cb58c2727de62e59524758ca69c94283fe7cb3f1fa20dc495c03de3916c5ae76",
+        "size_in_bytes": 1854
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f1d01d4631c3bb2ef1fbe85ada2348e3605dcd7a6d15a395c5c3f5ca964330c",
+        "sha256_in_prefix": "2f1d01d4631c3bb2ef1fbe85ada2348e3605dcd7a6d15a395c5c3f5ca964330c",
+        "size_in_bytes": 2226
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_ext_type.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "17a2c71e93814b43df72481a9b1dbec208f92eaefed1358a06bcadc9285ff159",
+        "sha256_in_prefix": "17a2c71e93814b43df72481a9b1dbec208f92eaefed1358a06bcadc9285ff159",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_msgpack_numpy.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "757d7da94f61fc07658ecff3669ce1ca1d912ee85fe481366add73d21dcb1f3d",
+        "sha256_in_prefix": "757d7da94f61fc07658ecff3669ce1ca1d912ee85fe481366add73d21dcb1f3d",
+        "size_in_bytes": 2876
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/_version.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "e039bb1ae4273fa7a8e98630263505ab769975259d6dc4c210b9cbe0f3a62d7c",
+        "sha256_in_prefix": "e039bb1ae4273fa7a8e98630263505ab769975259d6dc4c210b9cbe0f3a62d7c",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "8544e393985de94af8da24f1ec304d018417f18f65a5c08fe35230f1c3192ed9",
+        "sha256_in_prefix": "8544e393985de94af8da24f1ec304d018417f18f65a5c08fe35230f1c3192ed9",
+        "size_in_bytes": 1805
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/__pycache__/util.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "d770b4b486ed7b28e3f107f700d910d121a39a357bc6e55b1f6727e78ff03d4f",
+        "sha256_in_prefix": "d770b4b486ed7b28e3f107f700d910d121a39a357bc6e55b1f6727e78ff03d4f",
+        "size_in_bytes": 491
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_ext_type.py",
+        "path_type": "hardlink",
+        "sha256": "e88feb3612124d7281e88bd5e6eddd8c46654d50ce90fb03559141148283c828",
+        "sha256_in_prefix": "e88feb3612124d7281e88bd5e6eddd8c46654d50ce90fb03559141148283c828",
+        "size_in_bytes": 494
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_msgpack_numpy.py",
+        "path_type": "hardlink",
+        "sha256": "2036d94a87c6866e1dfe4dd82f24a314534c3ce05e1757e9420f4dffd816c304",
+        "sha256_in_prefix": "2036d94a87c6866e1dfe4dd82f24a314534c3ce05e1757e9420f4dffd816c304",
+        "size_in_bytes": 4334
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_packer.cpython-38-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "576b00e748695a4af29e474038b0a7901a108440ed5021c8ed80978c88f007cb",
+        "sha256_in_prefix": "576b00e748695a4af29e474038b0a7901a108440ed5021c8ed80978c88f007cb",
+        "size_in_bytes": 112616
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_packer.pyx",
+        "path_type": "hardlink",
+        "sha256": "3d74a9b4d4bf93ba4822e53abb0cc4cb82ceff42e1a12e286f7ba787e371693c",
+        "sha256_in_prefix": "3d74a9b4d4bf93ba4822e53abb0cc4cb82ceff42e1a12e286f7ba787e371693c",
+        "size_in_bytes": 13850
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_unpacker.cpython-38-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "32b751fc3b00f12413b8f8d3d32a08129a76b2ddab282aaa1f8f38649145abfc",
+        "sha256_in_prefix": "32b751fc3b00f12413b8f8d3d32a08129a76b2ddab282aaa1f8f38649145abfc",
+        "size_in_bytes": 136200
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_unpacker.pyx",
+        "path_type": "hardlink",
+        "sha256": "02ef98c48555e9765b7526a62f4e1f263ef5d5d428d82eb81768872cc1dcca6c",
+        "sha256_in_prefix": "02ef98c48555e9765b7526a62f4e1f263ef5d5d428d82eb81768872cc1dcca6c",
+        "size_in_bytes": 19218
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/_version.py",
+        "path_type": "hardlink",
+        "sha256": "38b308f5d5e3a64d5ada0e28e63ce0065f685d0aba680cd72f61775a527f134e",
+        "sha256_in_prefix": "38b308f5d5e3a64d5ada0e28e63ce0065f685d0aba680cd72f61775a527f134e",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/buff_converter.h",
+        "path_type": "hardlink",
+        "sha256": "19a0dbc599cda564799f95732400399f9871b2ed233ecd42bc245a8559531ddd",
+        "sha256_in_prefix": "19a0dbc599cda564799f95732400399f9871b2ed233ecd42bc245a8559531ddd",
+        "size_in_bytes": 661
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "7424d67a2f1da64accb100dc8d093be004e5f47b08047d326edf3338f36a3187",
+        "sha256_in_prefix": "7424d67a2f1da64accb100dc8d093be004e5f47b08047d326edf3338f36a3187",
+        "size_in_bytes": 1081
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/pack.h",
+        "path_type": "hardlink",
+        "sha256": "56c566812002a484c0f4a0aa003f035474f47bfe19e9c448a3a9578954a44cdb",
+        "sha256_in_prefix": "56c566812002a484c0f4a0aa003f035474f47bfe19e9c448a3a9578954a44cdb",
+        "size_in_bytes": 2628
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/pack_template.h",
+        "path_type": "hardlink",
+        "sha256": "0626c1e27b6277d8afedd3aa2c03d5b54233ee2e33d9c63840f8bfedf6b2d664",
+        "sha256_in_prefix": "0626c1e27b6277d8afedd3aa2c03d5b54233ee2e33d9c63840f8bfedf6b2d664",
+        "size_in_bytes": 20708
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/sysdep.h",
+        "path_type": "hardlink",
+        "sha256": "0608ba6aa97c6b1eb0435ba9538b1cce5661ff4bb6dc637434fc9f7e36a56d77",
+        "sha256_in_prefix": "0608ba6aa97c6b1eb0435ba9538b1cce5661ff4bb6dc637434fc9f7e36a56d77",
+        "size_in_bytes": 6464
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/unpack.h",
+        "path_type": "hardlink",
+        "sha256": "13be47e4ccd4d2666b94ed1bee349d11ad4dab7bba59bf27e80ee019373304ed",
+        "sha256_in_prefix": "13be47e4ccd4d2666b94ed1bee349d11ad4dab7bba59bf27e80ee019373304ed",
+        "size_in_bytes": 8070
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/unpack_define.h",
+        "path_type": "hardlink",
+        "sha256": "aa32cd06e1e7e33141181964a84cd86081930c2a05c81d1a27b83d1603520dda",
+        "sha256_in_prefix": "aa32cd06e1e7e33141181964a84cd86081930c2a05c81d1a27b83d1603520dda",
+        "size_in_bytes": 2372
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/unpack_template.h",
+        "path_type": "hardlink",
+        "sha256": "682c099deddec141545c8d1b909661cd83c963b76f120bec0d7490652b883381",
+        "sha256_in_prefix": "682c099deddec141545c8d1b909661cd83c963b76f120bec0d7490652b883381",
+        "size_in_bytes": 14888
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/msgpack/util.py",
+        "path_type": "hardlink",
+        "sha256": "6abb8ce02a6fb1fef3522ac4bc1c7b0e4edd56a3a8a6afcea622187314cb1be3",
+        "sha256_in_prefix": "6abb8ce02a6fb1fef3522ac4bc1c7b0e4edd56a3a8a6afcea622187314cb1be3",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "0aeee01a14f141b3502b2703d5580a0647eb9e08225b8113005084f7ed227b8d",
+        "sha256_in_prefix": "0aeee01a14f141b3502b2703d5580a0647eb9e08225b8113005084f7ed227b8d",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/__pycache__/test_json_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "0e3a6af1c28459dfd9a64484c2f7035553b67fbbab62dc18790060197e2ae28f",
+        "sha256_in_prefix": "0e3a6af1c28459dfd9a64484c2f7035553b67fbbab62dc18790060197e2ae28f",
+        "size_in_bytes": 6333
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/__pycache__/test_msgpack_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "55d1a7e2b605c71f01ee3c34c2a9179176162f7cc51401c30074adf626a6f27f",
+        "sha256_in_prefix": "55d1a7e2b605c71f01ee3c34c2a9179176162f7cc51401c30074adf626a6f27f",
+        "size_in_bytes": 2766
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/__pycache__/test_pickle_api.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "327a2282354a4acbd7dbbf4b02aa5203c261a526c42618a7c7e30818ae486272",
+        "sha256_in_prefix": "327a2282354a4acbd7dbbf4b02aa5203c261a526c42618a7c7e30818ae486272",
+        "size_in_bytes": 939
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7cac56535cbe2eb18500e741bed517fb0c4c7a04ef6b822679546e2a28d1bb3",
+        "sha256_in_prefix": "c7cac56535cbe2eb18500e741bed517fb0c4c7a04ef6b822679546e2a28d1bb3",
+        "size_in_bytes": 154
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/cloudpickle_file_test.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "770516d75994431e98b13e8fee134fc651bb9601643fb954b21aea116673780d",
+        "sha256_in_prefix": "770516d75994431e98b13e8fee134fc651bb9601643fb954b21aea116673780d",
+        "size_in_bytes": 4364
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/__pycache__/testutils.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "dbfcc58a0d13d91707af9c2e5b8f1469acaf965ab1a7f2b11f17222317cd30fd",
+        "sha256_in_prefix": "dbfcc58a0d13d91707af9c2e5b8f1469acaf965ab1a7f2b11f17222317cd30fd",
+        "size_in_bytes": 3873
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/cloudpickle_file_test.py",
+        "path_type": "hardlink",
+        "sha256": "590abd8f1d5409dde78c395cc71b2e2e0e5471074b23c38a22505c993704fd50",
+        "sha256_in_prefix": "590abd8f1d5409dde78c395cc71b2e2e0e5471074b23c38a22505c993704fd50",
+        "size_in_bytes": 4430
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/cloudpickle/testutils.py",
+        "path_type": "hardlink",
+        "sha256": "8da07ed0a74c678bccf4a63e6fc6afde05e48f85b0681d909826816bb51010a7",
+        "sha256_in_prefix": "8da07ed0a74c678bccf4a63e6fc6afde05e48f85b0681d909826816bb51010a7",
+        "size_in_bytes": 4530
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "da9f4781618e7f956b2341e14272592c72fc9071ba8fb4e2e5449f4f1f29a9e7",
+        "sha256_in_prefix": "da9f4781618e7f956b2341e14272592c72fc9071ba8fb4e2e5449f4f1f29a9e7",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_buffer.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "58861d33b8d1e93e0cf703ffa7d2eeba955ceb0ac422d98e5382fbb063725306",
+        "sha256_in_prefix": "58861d33b8d1e93e0cf703ffa7d2eeba955ceb0ac422d98e5382fbb063725306",
+        "size_in_bytes": 1532
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_case.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "1d27c7072eb92848a12e9bbae8d90f415d75fc1f5e9b177d7bde6c3069ff5f2a",
+        "sha256_in_prefix": "1d27c7072eb92848a12e9bbae8d90f415d75fc1f5e9b177d7bde6c3069ff5f2a",
+        "size_in_bytes": 3611
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_except.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "023d064d5787b3bfd7d9d9e6812ac382dd8cd2f5d7cc6ee5f795b4e6f9cb7b5e",
+        "sha256_in_prefix": "023d064d5787b3bfd7d9d9e6812ac382dd8cd2f5d7cc6ee5f795b4e6f9cb7b5e",
+        "size_in_bytes": 4952
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_extension.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "8b141fee49476652f60a922fb53d39eb1c93ca18e90b85c26018553f583b490e",
+        "sha256_in_prefix": "8b141fee49476652f60a922fb53d39eb1c93ca18e90b85c26018553f583b490e",
+        "size_in_bytes": 3620
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_format.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "2fa0a16a2ee46155aa6c11b0be94738582d03cf7cee1575723cf7d798bc54ed0",
+        "sha256_in_prefix": "2fa0a16a2ee46155aa6c11b0be94738582d03cf7cee1575723cf7d798bc54ed0",
+        "size_in_bytes": 2140
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_limits.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "943a2e7b0c7761f497403d0daf5ce6da3ecf5d0417ae82a97ff0abf8c383061d",
+        "sha256_in_prefix": "943a2e7b0c7761f497403d0daf5ce6da3ecf5d0417ae82a97ff0abf8c383061d",
+        "size_in_bytes": 2697
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_memoryview.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a0260b8aeaac84dad8d8d2c1db64c845b9d9c7dbab5b04fa8039df5c063ba64",
+        "sha256_in_prefix": "9a0260b8aeaac84dad8d8d2c1db64c845b9d9c7dbab5b04fa8039df5c063ba64",
+        "size_in_bytes": 3539
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_newspec.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "dbc7ae38801d9aa9ffd80c3e3f8949a070adf2680f1b7fffc6d87bf4306ba9cf",
+        "sha256_in_prefix": "dbc7ae38801d9aa9ffd80c3e3f8949a070adf2680f1b7fffc6d87bf4306ba9cf",
+        "size_in_bytes": 4025
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_numpy.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "e20cc0d38f150a481f975416691169c2fa0b5168aedd2f2ff74de0520c9f6226",
+        "sha256_in_prefix": "e20cc0d38f150a481f975416691169c2fa0b5168aedd2f2ff74de0520c9f6226",
+        "size_in_bytes": 13542
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_pack.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "b18e7a35c3eb130e2e35b4358db8b30ba8e5668b48ed949d5488e3971feb7160",
+        "sha256_in_prefix": "b18e7a35c3eb130e2e35b4358db8b30ba8e5668b48ed949d5488e3971feb7160",
+        "size_in_bytes": 5922
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_read_size.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "61b41473ab0c5172931eec71e086c227b225ff42d671ef4ebfa930de4e1b14b8",
+        "sha256_in_prefix": "61b41473ab0c5172931eec71e086c227b225ff42d671ef4ebfa930de4e1b14b8",
+        "size_in_bytes": 2132
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_seq.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "0694463930b567309ccb741fc8770fd93eec68567eee110444d8ec8e59d84b6f",
+        "sha256_in_prefix": "0694463930b567309ccb741fc8770fd93eec68567eee110444d8ec8e59d84b6f",
+        "size_in_bytes": 954
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_sequnpack.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "0f7a9aaaf182e018fbcdb80fccdf6675af62c0a9875190d2dc4949a690a33203",
+        "sha256_in_prefix": "0f7a9aaaf182e018fbcdb80fccdf6675af62c0a9875190d2dc4949a690a33203",
+        "size_in_bytes": 3973
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_stricttype.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "fb77dfc500aab30a3867cc16a666bbf3caec4c57a2ed3da80e80971fd388541d",
+        "sha256_in_prefix": "fb77dfc500aab30a3867cc16a666bbf3caec4c57a2ed3da80e80971fd388541d",
+        "size_in_bytes": 2204
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_subtype.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "3271a4067639f9691f95f6d1afffdcc25b90ad6478015bb0e43c4a87fd03b10d",
+        "sha256_in_prefix": "3271a4067639f9691f95f6d1afffdcc25b90ad6478015bb0e43c4a87fd03b10d",
+        "size_in_bytes": 963
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/__pycache__/test_unpack.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "87cafccb9ce34df1e6d6237c7e5a02b26935047312c470bcf32539998f4efbb8",
+        "sha256_in_prefix": "87cafccb9ce34df1e6d6237c7e5a02b26935047312c470bcf32539998f4efbb8",
+        "size_in_bytes": 2428
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_buffer.py",
+        "path_type": "hardlink",
+        "sha256": "8cdc472907be61ae1092dfac931b174f43e9807b4f9dd298b4d1abf0a026e73f",
+        "sha256_in_prefix": "8cdc472907be61ae1092dfac931b174f43e9807b4f9dd298b4d1abf0a026e73f",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_case.py",
+        "path_type": "hardlink",
+        "sha256": "7eb8d06a1ff663643db50dca10a83a09d3ac0d4a8890a217cfdcbe010a120c36",
+        "sha256_in_prefix": "7eb8d06a1ff663643db50dca10a83a09d3ac0d4a8890a217cfdcbe010a120c36",
+        "size_in_bytes": 2635
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_except.py",
+        "path_type": "hardlink",
+        "sha256": "91631aff478a0b3811e95963323fe9edd3cafb4b3cbc5baf030157ce959e0315",
+        "sha256_in_prefix": "91631aff478a0b3811e95963323fe9edd3cafb4b3cbc5baf030157ce959e0315",
+        "size_in_bytes": 1719
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_extension.py",
+        "path_type": "hardlink",
+        "sha256": "f9488028df39c409578e0eea77212d9873aceb4b4e15a227beadc6af14c9d197",
+        "sha256_in_prefix": "f9488028df39c409578e0eea77212d9873aceb4b4e15a227beadc6af14c9d197",
+        "size_in_bytes": 2877
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_format.py",
+        "path_type": "hardlink",
+        "sha256": "29a875162bb6bb08267c6386e6fc17817541de63be5354b1e2ed7b8fa31ba34a",
+        "sha256_in_prefix": "29a875162bb6bb08267c6386e6fc17817541de63be5354b1e2ed7b8fa31ba34a",
+        "size_in_bytes": 2104
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_limits.py",
+        "path_type": "hardlink",
+        "sha256": "b314211e4a8e592fa5ee0666d785731a1b4dafc73a08991bbbf60d36ff0e657e",
+        "sha256_in_prefix": "b314211e4a8e592fa5ee0666d785731a1b4dafc73a08991bbbf60d36ff0e657e",
+        "size_in_bytes": 3207
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_memoryview.py",
+        "path_type": "hardlink",
+        "sha256": "8487a77cfebb1f80cc427a80122d4e9815f12893be7f70d092fac5c31bb6fb07",
+        "sha256_in_prefix": "8487a77cfebb1f80cc427a80122d4e9815f12893be7f70d092fac5c31bb6fb07",
+        "size_in_bytes": 3000
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_newspec.py",
+        "path_type": "hardlink",
+        "sha256": "4b21cb26c9036f599ad79664d03999ec2132ea5eb5ea0e5459f1b544ac1feacc",
+        "sha256_in_prefix": "4b21cb26c9036f599ad79664d03999ec2132ea5eb5ea0e5459f1b544ac1feacc",
+        "size_in_bytes": 2582
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_numpy.py",
+        "path_type": "hardlink",
+        "sha256": "bbc46db7c7d53dfac8dfc852e98243add89c2c488a9fd1a282eac9720fbeaf81",
+        "sha256_in_prefix": "bbc46db7c7d53dfac8dfc852e98243add89c2c488a9fd1a282eac9720fbeaf81",
+        "size_in_bytes": 8986
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_pack.py",
+        "path_type": "hardlink",
+        "sha256": "451a64d58882932152304f53fa3a2edd67c5a9ea2cffb637a66864ca1131a6c9",
+        "sha256_in_prefix": "451a64d58882932152304f53fa3a2edd67c5a9ea2cffb637a66864ca1131a6c9",
+        "size_in_bytes": 4713
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_read_size.py",
+        "path_type": "hardlink",
+        "sha256": "2537b4d43ca1ed525668c039c61820ec60dd224102fc0cd3ed38cba62001098d",
+        "sha256_in_prefix": "2537b4d43ca1ed525668c039c61820ec60dd224102fc0cd3ed38cba62001098d",
+        "size_in_bytes": 1859
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_seq.py",
+        "path_type": "hardlink",
+        "sha256": "aad00ede5fabe2e855d213532eea3c3c7bc8b8d0b8a34763886fbc1aca632d85",
+        "sha256_in_prefix": "aad00ede5fabe2e855d213532eea3c3c7bc8b8d0b8a34763886fbc1aca632d85",
+        "size_in_bytes": 1272
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_sequnpack.py",
+        "path_type": "hardlink",
+        "sha256": "70c153aeb200346cb355f9b934d7fb38e67f6cd5e9aa2185b6f36974d5d35cd0",
+        "sha256_in_prefix": "70c153aeb200346cb355f9b934d7fb38e67f6cd5e9aa2185b6f36974d5d35cd0",
+        "size_in_bytes": 3542
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_stricttype.py",
+        "path_type": "hardlink",
+        "sha256": "a88a63a1cec1a1110cb967cd4b574f9e5f7d664143906cfc3f8d31ba588328fb",
+        "sha256_in_prefix": "a88a63a1cec1a1110cb967cd4b574f9e5f7d664143906cfc3f8d31ba588328fb",
+        "size_in_bytes": 1833
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_subtype.py",
+        "path_type": "hardlink",
+        "sha256": "02f33b1f218885658e77c96a46c20685ceddb7f9a66640b5823d78c7b83d252c",
+        "sha256_in_prefix": "02f33b1f218885658e77c96a46c20685ceddb7f9a66640b5823d78c7b83d252c",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/msgpack/test_unpack.py",
+        "path_type": "hardlink",
+        "sha256": "f03fb55688b7761c7359e00d680a2dad60a30c009146ab31da87743c60e5c394",
+        "sha256_in_prefix": "f03fb55688b7761c7359e00d680a2dad60a30c009146ab31da87743c60e5c394",
+        "size_in_bytes": 1839
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/test_json_api.py",
+        "path_type": "hardlink",
+        "sha256": "0a1bfd8d3d9a22a775c540e6953d4334b5a06a34a91125a5b67048f0ae413054",
+        "sha256_in_prefix": "0a1bfd8d3d9a22a775c540e6953d4334b5a06a34a91125a5b67048f0ae413054",
+        "size_in_bytes": 6447
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/test_msgpack_api.py",
+        "path_type": "hardlink",
+        "sha256": "bdb8084e56274c2af56eafb7737d37c11fe36112725d68a8e8180beb7396297d",
+        "sha256_in_prefix": "bdb8084e56274c2af56eafb7737d37c11fe36112725d68a8e8180beb7396297d",
+        "size_in_bytes": 2455
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/test_pickle_api.py",
+        "path_type": "hardlink",
+        "sha256": "7bd06403e7764e4cf72e7e54d3894ea289e5e530e0e367faad49e09af993f1d1",
+        "sha256_in_prefix": "7bd06403e7764e4cf72e7e54d3894ea289e5e530e0e367faad49e09af993f1d1",
+        "size_in_bytes": 925
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/ujson/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/ujson/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "9782af854b1975da5d35d93d7ec26eccca417ddba9e24b696e9625cfb780c6da",
+        "sha256_in_prefix": "9782af854b1975da5d35d93d7ec26eccca417ddba9e24b696e9625cfb780c6da",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/ujson/__pycache__/test_ujson.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "f109f37cfa1bdd5245f523e699fcd380eea3152f30ab339d2eea669a365c0a17",
+        "sha256_in_prefix": "f109f37cfa1bdd5245f523e699fcd380eea3152f30ab339d2eea669a365c0a17",
+        "size_in_bytes": 36371
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/tests/ujson/test_ujson.py",
+        "path_type": "hardlink",
+        "sha256": "8785585cf3516e8bb92b6eb6bb8aae8660c04dc3519640977fe2576fe8c6727e",
+        "sha256_in_prefix": "8785585cf3516e8bb92b6eb6bb8aae8660c04dc3519640977fe2576fe8c6727e",
+        "size_in_bytes": 32045
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/JSONtoObj.c",
+        "path_type": "hardlink",
+        "sha256": "37ecacb2ed8c33d3b5a606816696d4eb758bfdb6a7dd468aebdd1e63ad99266e",
+        "sha256_in_prefix": "37ecacb2ed8c33d3b5a606816696d4eb758bfdb6a7dd468aebdd1e63ad99266e",
+        "size_in_bytes": 5935
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4c161bbe3ab07e0ad4007e6a3d4ce028c11d8fe0ec98a13a3b96ac9987709255",
+        "sha256_in_prefix": "4c161bbe3ab07e0ad4007e6a3d4ce028c11d8fe0ec98a13a3b96ac9987709255",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "fcedfe237d147de079220f3128383b9feea1c8b935e382fd63dd1e34a7bec0ac",
+        "sha256_in_prefix": "fcedfe237d147de079220f3128383b9feea1c8b935e382fd63dd1e34a7bec0ac",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/objToJSON.c",
+        "path_type": "hardlink",
+        "sha256": "5e30f87ca7fbe5075a8dec77a70f4e46bced27ef1573ace90ec4d09761f3c2d2",
+        "sha256_in_prefix": "5e30f87ca7fbe5075a8dec77a70f4e46bced27ef1573ace90ec4d09761f3c2d2",
+        "size_in_bytes": 22961
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/py_defines.h",
+        "path_type": "hardlink",
+        "sha256": "69270a12b292938f307486585327052a2985818b10c73626deacca8c8cc41a83",
+        "sha256_in_prefix": "69270a12b292938f307486585327052a2985818b10c73626deacca8c8cc41a83",
+        "size_in_bytes": 2365
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/ujson.c",
+        "path_type": "hardlink",
+        "sha256": "2ba3f636ffa1432441d8c2984360999771a221416572cc14e18a851f4a0e9821",
+        "sha256_in_prefix": "2ba3f636ffa1432441d8c2984360999771a221416572cc14e18a851f4a0e9821",
+        "size_in_bytes": 4748
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/ujson.cpython-38-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "4b5e3e9107d62ba9eb8cc7da300c2ede56aa1cf8946676622e9e2123386d379b",
+        "sha256_in_prefix": "4b5e3e9107d62ba9eb8cc7da300c2ede56aa1cf8946676622e9e2123386d379b",
+        "size_in_bytes": 60064
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/ujson/version.h",
+        "path_type": "hardlink",
+        "sha256": "96d573ac1fcaba4d9ce390e5f93df1936d2ba4adb5f71c31dbc95b556a9a56e2",
+        "sha256_in_prefix": "96d573ac1fcaba4d9ce390e5f93df1936d2ba4adb5f71c31dbc95b556a9a56e2",
+        "size_in_bytes": 1999
+      },
+      {
+        "_path": "lib/python3.8/site-packages/srsly/util.py",
+        "path_type": "hardlink",
+        "sha256": "7386f2a396c8caffd0a324cb0799cad754d0868a5ee256e8ef5bc8f6e2b40807",
+        "sha256_in_prefix": "7386f2a396c8caffd0a324cb0799cad754d0868a5ee256e8ef5bc8f6e2b40807",
+        "size_in_bytes": 723
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "None",
+  "size": 218232,
+  "subdir": "linux-64",
+  "timestamp": 1607548595823,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/srsly-1.0.5-py38h2531618_0.tar.bz2",
+  "version": "1.0.5"
+}

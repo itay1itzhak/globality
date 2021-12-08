@@ -1,0 +1,124 @@
+{
+  "arch": "x86_64",
+  "build": "h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/private/home/itayitzhak/.conda/pkgs/libuv-1.40.0-h7b6447c_0",
+  "features": "",
+  "files": [
+    "include/uv.h",
+    "include/uv/errno.h",
+    "include/uv/linux.h",
+    "include/uv/threadpool.h",
+    "include/uv/unix.h",
+    "include/uv/version.h",
+    "lib/libuv.a",
+    "lib/libuv.so",
+    "lib/libuv.so.1",
+    "lib/libuv.so.1.0.0",
+    "lib/pkgconfig/libuv.pc"
+  ],
+  "fn": "libuv-1.40.0-h7b6447c_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/private/home/itayitzhak/.conda/pkgs/libuv-1.40.0-h7b6447c_0",
+    "type": 1
+  },
+  "md5": "440323c587792bbd97e2b3e62e214176",
+  "name": "libuv",
+  "package_tarball_full_path": "/private/home/itayitzhak/.conda/pkgs/libuv-1.40.0-h7b6447c_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/uv.h",
+        "path_type": "hardlink",
+        "sha256": "253cfea345971c78dbb15853fe0c1df960bbef6af8eeb78c85525bc9ff1553bf",
+        "sha256_in_prefix": "253cfea345971c78dbb15853fe0c1df960bbef6af8eeb78c85525bc9ff1553bf",
+        "size_in_bytes": 65703
+      },
+      {
+        "_path": "include/uv/errno.h",
+        "path_type": "hardlink",
+        "sha256": "dc50a23835d17d35ba55883f0c6dd97c548138901ff528fe9971a04e2246152a",
+        "sha256_in_prefix": "dc50a23835d17d35ba55883f0c6dd97c548138901ff528fe9971a04e2246152a",
+        "size_in_bytes": 10359
+      },
+      {
+        "_path": "include/uv/linux.h",
+        "path_type": "hardlink",
+        "sha256": "a5fff8961e8f3da165fabf55d70cfb1eb44562cc0b8bf3b93b53bc3c9d283c86",
+        "sha256_in_prefix": "a5fff8961e8f3da165fabf55d70cfb1eb44562cc0b8bf3b93b53bc3c9d283c86",
+        "size_in_bytes": 1781
+      },
+      {
+        "_path": "include/uv/threadpool.h",
+        "path_type": "hardlink",
+        "sha256": "43cb2c06d4e30e08126d6aa92441ab18f360e38fe768211ce1bcde499bb2c103",
+        "sha256_in_prefix": "43cb2c06d4e30e08126d6aa92441ab18f360e38fe768211ce1bcde499bb2c103",
+        "size_in_bytes": 1497
+      },
+      {
+        "_path": "include/uv/unix.h",
+        "path_type": "hardlink",
+        "sha256": "0726662b0472104f1f97dac8504c22e08673950e89c4092e80d86f104bc84c8e",
+        "sha256_in_prefix": "0726662b0472104f1f97dac8504c22e08673950e89c4092e80d86f104bc84c8e",
+        "size_in_bytes": 19536
+      },
+      {
+        "_path": "include/uv/version.h",
+        "path_type": "hardlink",
+        "sha256": "fe7334383a3d862f87e9e45e8799aa814b19070ef3d46d4068dffc8e4cf6ae1e",
+        "sha256_in_prefix": "fe7334383a3d862f87e9e45e8799aa814b19070ef3d46d4068dffc8e4cf6ae1e",
+        "size_in_bytes": 1831
+      },
+      {
+        "_path": "lib/libuv.a",
+        "path_type": "hardlink",
+        "sha256": "15503ff43abeb869ad75df70462795c05d0a5fd453c4acdf801619c893c3fd6f",
+        "sha256_in_prefix": "15503ff43abeb869ad75df70462795c05d0a5fd453c4acdf801619c893c3fd6f",
+        "size_in_bytes": 1784486
+      },
+      {
+        "_path": "lib/libuv.so",
+        "path_type": "softlink",
+        "sha256": "1be0df5a25ccb54cd3bb4e7603bd9c700026ed6f16b6f603ef9c24ed9a0701b4",
+        "size_in_bytes": 931480
+      },
+      {
+        "_path": "lib/libuv.so.1",
+        "path_type": "softlink",
+        "sha256": "1be0df5a25ccb54cd3bb4e7603bd9c700026ed6f16b6f603ef9c24ed9a0701b4",
+        "size_in_bytes": 931480
+      },
+      {
+        "_path": "lib/libuv.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "1be0df5a25ccb54cd3bb4e7603bd9c700026ed6f16b6f603ef9c24ed9a0701b4",
+        "sha256_in_prefix": "1be0df5a25ccb54cd3bb4e7603bd9c700026ed6f16b6f603ef9c24ed9a0701b4",
+        "size_in_bytes": 931480
+      },
+      {
+        "_path": "lib/pkgconfig/libuv.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libuv_1601048951262/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "c346fbba4f11aadb6a03c88c519f95fdae27897b6e26447f9f9828b45c61fda0",
+        "sha256_in_prefix": "151cdb06462c38842ecebe5faf23423d658da511ef8f92569fc8e370d6c348cd",
+        "size_in_bytes": 530
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "defaults/linux-64::libuv==1.40.0=h7b6447c_0",
+  "subdir": "linux-64",
+  "timestamp": 1601049115502,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuv-1.40.0-h7b6447c_0.tar.bz2",
+  "version": "1.40.0"
+}

@@ -1,0 +1,577 @@
+{
+  "arch": "x86_64",
+  "build": "1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/pytorch/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/private/home/itayitzhak/.conda/pkgs/magma-cuda110-2.5.2-1",
+  "features": "",
+  "files": [
+    "include/magma.h",
+    "include/magma_auxiliary.h",
+    "include/magma_batched.h",
+    "include/magma_bulge.h",
+    "include/magma_c.h",
+    "include/magma_cbatched.h",
+    "include/magma_cbulge.h",
+    "include/magma_cbulgeinc.h",
+    "include/magma_cgehrd_m.h",
+    "include/magma_clapack.h",
+    "include/magma_copy.h",
+    "include/magma_copy_v1.h",
+    "include/magma_cvbatched.h",
+    "include/magma_d.h",
+    "include/magma_dbatched.h",
+    "include/magma_dbulge.h",
+    "include/magma_dbulgeinc.h",
+    "include/magma_dgehrd_m.h",
+    "include/magma_dlapack.h",
+    "include/magma_ds.h",
+    "include/magma_dvbatched.h",
+    "include/magma_hbatched.h",
+    "include/magma_htc.h",
+    "include/magma_lapack.h",
+    "include/magma_mangling.h",
+    "include/magma_mangling_cmake.h",
+    "include/magma_operators.h",
+    "include/magma_s.h",
+    "include/magma_sbatched.h",
+    "include/magma_sbulge.h",
+    "include/magma_sbulgeinc.h",
+    "include/magma_sgehrd_m.h",
+    "include/magma_slapack.h",
+    "include/magma_svbatched.h",
+    "include/magma_types.h",
+    "include/magma_v2.h",
+    "include/magma_vbatched.h",
+    "include/magma_z.h",
+    "include/magma_zbatched.h",
+    "include/magma_zbulge.h",
+    "include/magma_zbulgeinc.h",
+    "include/magma_zc.h",
+    "include/magma_zgehrd_m.h",
+    "include/magma_zlapack.h",
+    "include/magma_zvbatched.h",
+    "include/magmablas.h",
+    "include/magmablas_c.h",
+    "include/magmablas_c_v1.h",
+    "include/magmablas_c_v1_map.h",
+    "include/magmablas_d.h",
+    "include/magmablas_d_v1.h",
+    "include/magmablas_d_v1_map.h",
+    "include/magmablas_ds.h",
+    "include/magmablas_ds_v1.h",
+    "include/magmablas_ds_v1_map.h",
+    "include/magmablas_h.h",
+    "include/magmablas_s.h",
+    "include/magmablas_s_v1.h",
+    "include/magmablas_s_v1_map.h",
+    "include/magmablas_v1.h",
+    "include/magmablas_v1_map.h",
+    "include/magmablas_z.h",
+    "include/magmablas_z_v1.h",
+    "include/magmablas_z_v1_map.h",
+    "include/magmablas_zc.h",
+    "include/magmablas_zc_v1.h",
+    "include/magmablas_zc_v1_map.h",
+    "lib/libmagma.a"
+  ],
+  "fn": "magma-cuda110-2.5.2-1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/private/home/itayitzhak/.conda/pkgs/magma-cuda110-2.5.2-1",
+    "type": 1
+  },
+  "md5": "93260a5568ef832b03510ccee60a369c",
+  "name": "magma-cuda110",
+  "package_tarball_full_path": "/private/home/itayitzhak/.conda/pkgs/magma-cuda110-2.5.2-1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/magma.h",
+        "path_type": "hardlink",
+        "sha256": "f47fb7c5fc351da0ccd5d3122a249fb90cdb64781b0a8a75ab641e5b8395c7ba",
+        "sha256_in_prefix": "f47fb7c5fc351da0ccd5d3122a249fb90cdb64781b0a8a75ab641e5b8395c7ba",
+        "size_in_bytes": 789
+      },
+      {
+        "_path": "include/magma_auxiliary.h",
+        "path_type": "hardlink",
+        "sha256": "ad2e230a0da1f223cb66ae458378b833535365010ccc2da8bb9f7b17621798ea",
+        "sha256_in_prefix": "ad2e230a0da1f223cb66ae458378b833535365010ccc2da8bb9f7b17621798ea",
+        "size_in_bytes": 13740
+      },
+      {
+        "_path": "include/magma_batched.h",
+        "path_type": "hardlink",
+        "sha256": "d63885eefa2b0c388691bb4f079d9b6abe0a4f3b82a63f3e7e553489543aa8ed",
+        "sha256_in_prefix": "d63885eefa2b0c388691bb4f079d9b6abe0a4f3b82a63f3e7e553489543aa8ed",
+        "size_in_bytes": 1815
+      },
+      {
+        "_path": "include/magma_bulge.h",
+        "path_type": "hardlink",
+        "sha256": "02d86bcda6f56348d43f8f3e9777fc3ac5cf695736d0b296d1eae705c3b6a285",
+        "sha256_in_prefix": "02d86bcda6f56348d43f8f3e9777fc3ac5cf695736d0b296d1eae705c3b6a285",
+        "size_in_bytes": 1939
+      },
+      {
+        "_path": "include/magma_c.h",
+        "path_type": "hardlink",
+        "sha256": "ea983c2db1a7521195a13f56620bdac9b0dcbe7f3962c2772ce3b65287947121",
+        "sha256_in_prefix": "ea983c2db1a7521195a13f56620bdac9b0dcbe7f3962c2772ce3b65287947121",
+        "size_in_bytes": 53269
+      },
+      {
+        "_path": "include/magma_cbatched.h",
+        "path_type": "hardlink",
+        "sha256": "a050f97b7aeff803c93569a3a6a04a3170ae97a136f1492e6e060ffb2c44f497",
+        "sha256_in_prefix": "a050f97b7aeff803c93569a3a6a04a3170ae97a136f1492e6e060ffb2c44f497",
+        "size_in_bytes": 39208
+      },
+      {
+        "_path": "include/magma_cbulge.h",
+        "path_type": "hardlink",
+        "sha256": "bf41502a60fdb05f1efdc2016ad1fcea95d1e3a8ad7408dbd0e04c8e82c7b006",
+        "sha256_in_prefix": "bf41502a60fdb05f1efdc2016ad1fcea95d1e3a8ad7408dbd0e04c8e82c7b006",
+        "size_in_bytes": 5912
+      },
+      {
+        "_path": "include/magma_cbulgeinc.h",
+        "path_type": "hardlink",
+        "sha256": "402bdcf48c0da40115232a5cb83843f298a3eb5e88afe44c4e04546af6824e4c",
+        "sha256_in_prefix": "402bdcf48c0da40115232a5cb83843f298a3eb5e88afe44c4e04546af6824e4c",
+        "size_in_bytes": 1697
+      },
+      {
+        "_path": "include/magma_cgehrd_m.h",
+        "path_type": "hardlink",
+        "sha256": "0d85a0bb5efb9b39ffe8304a473067c170ae3bc9fc981aeee734c6bdec73854f",
+        "sha256_in_prefix": "0d85a0bb5efb9b39ffe8304a473067c170ae3bc9fc981aeee734c6bdec73854f",
+        "size_in_bytes": 1638
+      },
+      {
+        "_path": "include/magma_clapack.h",
+        "path_type": "hardlink",
+        "sha256": "a2354a0206428cb78af14baef9129537ec776ac49d866f024d075fdb9503824c",
+        "sha256_in_prefix": "a2354a0206428cb78af14baef9129537ec776ac49d866f024d075fdb9503824c",
+        "size_in_bytes": 63482
+      },
+      {
+        "_path": "include/magma_copy.h",
+        "path_type": "hardlink",
+        "sha256": "8412a194179a90c896c80214b459cf30782c20929b9f12c84d03f2246e9f4747",
+        "sha256_in_prefix": "8412a194179a90c896c80214b459cf30782c20929b9f12c84d03f2246e9f4747",
+        "size_in_bytes": 30408
+      },
+      {
+        "_path": "include/magma_copy_v1.h",
+        "path_type": "hardlink",
+        "sha256": "a768c65715a390cee1e4c7c047d1438d775d600f0ea7c772ff866ee111ff8e4b",
+        "sha256_in_prefix": "a768c65715a390cee1e4c7c047d1438d775d600f0ea7c772ff866ee111ff8e4b",
+        "size_in_bytes": 11513
+      },
+      {
+        "_path": "include/magma_cvbatched.h",
+        "path_type": "hardlink",
+        "sha256": "0a8524d3503d7bdbfe1dcdabc9142155e2e32dded65aa51d21542762820c88d5",
+        "sha256_in_prefix": "0a8524d3503d7bdbfe1dcdabc9142155e2e32dded65aa51d21542762820c88d5",
+        "size_in_bytes": 25006
+      },
+      {
+        "_path": "include/magma_d.h",
+        "path_type": "hardlink",
+        "sha256": "aafb2586dd7e56ee65a404fe412693c1b64ba58a8fdfd48cd543ded3541737b2",
+        "sha256_in_prefix": "aafb2586dd7e56ee65a404fe412693c1b64ba58a8fdfd48cd543ded3541737b2",
+        "size_in_bytes": 49164
+      },
+      {
+        "_path": "include/magma_dbatched.h",
+        "path_type": "hardlink",
+        "sha256": "6c2d8a6d75e74b3637a7c2382e693b9bf2d3b8755f75311a9f4cfa08e033342a",
+        "sha256_in_prefix": "6c2d8a6d75e74b3637a7c2382e693b9bf2d3b8755f75311a9f4cfa08e033342a",
+        "size_in_bytes": 35627
+      },
+      {
+        "_path": "include/magma_dbulge.h",
+        "path_type": "hardlink",
+        "sha256": "ba68d1287737d2a82c67622545bbda8e2de5ad87c85e96703a58b6a40b1d7390",
+        "sha256_in_prefix": "ba68d1287737d2a82c67622545bbda8e2de5ad87c85e96703a58b6a40b1d7390",
+        "size_in_bytes": 5387
+      },
+      {
+        "_path": "include/magma_dbulgeinc.h",
+        "path_type": "hardlink",
+        "sha256": "55d459c458779f395036d4659c994c393fdf8bd9f644a6cbe85dc5f9cbee907d",
+        "sha256_in_prefix": "55d459c458779f395036d4659c994c393fdf8bd9f644a6cbe85dc5f9cbee907d",
+        "size_in_bytes": 1576
+      },
+      {
+        "_path": "include/magma_dgehrd_m.h",
+        "path_type": "hardlink",
+        "sha256": "ead52320f67fd9624e6ae10d99130bb5df422edf7a104ba16ed1d35c64cf4cb4",
+        "sha256_in_prefix": "ead52320f67fd9624e6ae10d99130bb5df422edf7a104ba16ed1d35c64cf4cb4",
+        "size_in_bytes": 1602
+      },
+      {
+        "_path": "include/magma_dlapack.h",
+        "path_type": "hardlink",
+        "sha256": "df136251177458299ca4bf16ab5490183efc2fc868a8747f2b0590515106d2b3",
+        "sha256_in_prefix": "df136251177458299ca4bf16ab5490183efc2fc868a8747f2b0590515106d2b3",
+        "size_in_bytes": 59398
+      },
+      {
+        "_path": "include/magma_ds.h",
+        "path_type": "hardlink",
+        "sha256": "135cb947636a4ea6c5231a0f7df6618b855ef675b8a1b8a7456e71b4ff73dc7b",
+        "sha256_in_prefix": "135cb947636a4ea6c5231a0f7df6618b855ef675b8a1b8a7456e71b4ff73dc7b",
+        "size_in_bytes": 2175
+      },
+      {
+        "_path": "include/magma_dvbatched.h",
+        "path_type": "hardlink",
+        "sha256": "06f34f654320b37a38759aef4e1a41f4e84687dc0df9c77b84ef14e78e2013b4",
+        "sha256_in_prefix": "06f34f654320b37a38759aef4e1a41f4e84687dc0df9c77b84ef14e78e2013b4",
+        "size_in_bytes": 22504
+      },
+      {
+        "_path": "include/magma_hbatched.h",
+        "path_type": "hardlink",
+        "sha256": "d577c7995fe7cbe4a60c68bfe41cc7ddd1b8630ca7ead1eda42e055b8d196c08",
+        "sha256_in_prefix": "d577c7995fe7cbe4a60c68bfe41cc7ddd1b8630ca7ead1eda42e055b8d196c08",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "include/magma_htc.h",
+        "path_type": "hardlink",
+        "sha256": "2196c575e4180f29155ddebec6a7cfa6fe3fe0362aa1ce9776634aa151bff84e",
+        "sha256_in_prefix": "2196c575e4180f29155ddebec6a7cfa6fe3fe0362aa1ce9776634aa151bff84e",
+        "size_in_bytes": 4736
+      },
+      {
+        "_path": "include/magma_lapack.h",
+        "path_type": "hardlink",
+        "sha256": "72e721f43add55194556f368967addc7a789e3a286f7738d854095ee24862883",
+        "sha256_in_prefix": "72e721f43add55194556f368967addc7a789e3a286f7738d854095ee24862883",
+        "size_in_bytes": 5659
+      },
+      {
+        "_path": "include/magma_mangling.h",
+        "path_type": "hardlink",
+        "sha256": "e8633d970cfa1e20f747bbc9b2bb0bd710940dcd32a8de8262725d350ccb93e8",
+        "sha256_in_prefix": "e8633d970cfa1e20f747bbc9b2bb0bd710940dcd32a8de8262725d350ccb93e8",
+        "size_in_bytes": 1357
+      },
+      {
+        "_path": "include/magma_mangling_cmake.h",
+        "path_type": "hardlink",
+        "sha256": "7aed24f16cd1c5e61ddc799cc9d05fd1a9f7fb147e236ea483d84759c91c1aa9",
+        "sha256_in_prefix": "7aed24f16cd1c5e61ddc799cc9d05fd1a9f7fb147e236ea483d84759c91c1aa9",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "include/magma_operators.h",
+        "path_type": "hardlink",
+        "sha256": "3e5ea2858e0b545b4ccda883a0329faf28fba404a6834508607b7981557b71bd",
+        "sha256_in_prefix": "3e5ea2858e0b545b4ccda883a0329faf28fba404a6834508607b7981557b71bd",
+        "size_in_bytes": 15978
+      },
+      {
+        "_path": "include/magma_s.h",
+        "path_type": "hardlink",
+        "sha256": "c2905275ac0fe485f2b3953c656ec934b4aed9077c0c0f6f7ed5bd9a6c99cf24",
+        "sha256_in_prefix": "c2905275ac0fe485f2b3953c656ec934b4aed9077c0c0f6f7ed5bd9a6c99cf24",
+        "size_in_bytes": 48502
+      },
+      {
+        "_path": "include/magma_sbatched.h",
+        "path_type": "hardlink",
+        "sha256": "0f6ec310b9d4c5729e4433316fa0134294cd3c072b2425461571ac928c17589e",
+        "sha256_in_prefix": "0f6ec310b9d4c5729e4433316fa0134294cd3c072b2425461571ac928c17589e",
+        "size_in_bytes": 35282
+      },
+      {
+        "_path": "include/magma_sbulge.h",
+        "path_type": "hardlink",
+        "sha256": "b27c9f745a01168e4365ac0839788f5c9b22724a10abeedc07fc2b1bec8f18e9",
+        "sha256_in_prefix": "b27c9f745a01168e4365ac0839788f5c9b22724a10abeedc07fc2b1bec8f18e9",
+        "size_in_bytes": 5334
+      },
+      {
+        "_path": "include/magma_sbulgeinc.h",
+        "path_type": "hardlink",
+        "sha256": "aca6d1294371cb740f921f27a7ac712825f5f183278097e967d488990701e24f",
+        "sha256_in_prefix": "aca6d1294371cb740f921f27a7ac712825f5f183278097e967d488990701e24f",
+        "size_in_bytes": 1565
+      },
+      {
+        "_path": "include/magma_sgehrd_m.h",
+        "path_type": "hardlink",
+        "sha256": "11dc5a860b268941352e0da6f4c4bf14d0c86ef158c60d7e249e7508ec08492c",
+        "sha256_in_prefix": "11dc5a860b268941352e0da6f4c4bf14d0c86ef158c60d7e249e7508ec08492c",
+        "size_in_bytes": 1596
+      },
+      {
+        "_path": "include/magma_slapack.h",
+        "path_type": "hardlink",
+        "sha256": "992aa18f31067824052a9fa78b8e7e0d8c216aa254863eb1be8e96464c007811",
+        "sha256_in_prefix": "992aa18f31067824052a9fa78b8e7e0d8c216aa254863eb1be8e96464c007811",
+        "size_in_bytes": 58839
+      },
+      {
+        "_path": "include/magma_svbatched.h",
+        "path_type": "hardlink",
+        "sha256": "7c07427e75dd70431aeea9ade9bf0789c61c3ca2fe9499638ae13967a212d958",
+        "sha256_in_prefix": "7c07427e75dd70431aeea9ade9bf0789c61c3ca2fe9499638ae13967a212d958",
+        "size_in_bytes": 22254
+      },
+      {
+        "_path": "include/magma_types.h",
+        "path_type": "hardlink",
+        "sha256": "11fb2fad0d739567e1e5d50b47b883fef768201f48ed60c2b94f9d1cf5db4d90",
+        "sha256_in_prefix": "11fb2fad0d739567e1e5d50b47b883fef768201f48ed60c2b94f9d1cf5db4d90",
+        "size_in_bytes": 31436
+      },
+      {
+        "_path": "include/magma_v2.h",
+        "path_type": "hardlink",
+        "sha256": "69c18808ee58deb0f853342401907775676ae8577d4e15b068bf2f13174d27a3",
+        "sha256_in_prefix": "69c18808ee58deb0f853342401907775676ae8577d4e15b068bf2f13174d27a3",
+        "size_in_bytes": 748
+      },
+      {
+        "_path": "include/magma_vbatched.h",
+        "path_type": "hardlink",
+        "sha256": "334fba02f273cfd377070cd52bc3c1ca6eb646064e05feee35dbb166c7994ea6",
+        "sha256_in_prefix": "334fba02f273cfd377070cd52bc3c1ca6eb646064e05feee35dbb166c7994ea6",
+        "size_in_bytes": 7571
+      },
+      {
+        "_path": "include/magma_z.h",
+        "path_type": "hardlink",
+        "sha256": "c1effff266f98cd495be870b744d8d09447cbd8999a87e129b9d664d02c20fde",
+        "sha256_in_prefix": "c1effff266f98cd495be870b744d8d09447cbd8999a87e129b9d664d02c20fde",
+        "size_in_bytes": 53886
+      },
+      {
+        "_path": "include/magma_zbatched.h",
+        "path_type": "hardlink",
+        "sha256": "e11f000549772b8b2ec1f80e870760b41ecca28f66229b868883005524bf817d",
+        "sha256_in_prefix": "e11f000549772b8b2ec1f80e870760b41ecca28f66229b868883005524bf817d",
+        "size_in_bytes": 39501
+      },
+      {
+        "_path": "include/magma_zbulge.h",
+        "path_type": "hardlink",
+        "sha256": "0e218227fd81199772f8c57b0e7d1b87c69d7c36701af26d50f6a08bc1dfb67a",
+        "sha256_in_prefix": "0e218227fd81199772f8c57b0e7d1b87c69d7c36701af26d50f6a08bc1dfb67a",
+        "size_in_bytes": 5915
+      },
+      {
+        "_path": "include/magma_zbulgeinc.h",
+        "path_type": "hardlink",
+        "sha256": "292972d7b41df3e9a6568a54a24f265282e9baef33bc1c4cd666122d2ff72061",
+        "sha256_in_prefix": "292972d7b41df3e9a6568a54a24f265282e9baef33bc1c4cd666122d2ff72061",
+        "size_in_bytes": 1655
+      },
+      {
+        "_path": "include/magma_zc.h",
+        "path_type": "hardlink",
+        "sha256": "113542fcb0535af2beba516b657069db5c264b8ddc4eb933a1eb2df9f8168adf",
+        "sha256_in_prefix": "113542fcb0535af2beba516b657069db5c264b8ddc4eb933a1eb2df9f8168adf",
+        "size_in_bytes": 2279
+      },
+      {
+        "_path": "include/magma_zgehrd_m.h",
+        "path_type": "hardlink",
+        "sha256": "4812faec5043aaf1858839c1c9251d739ddd95fd2127bc29b197f85af4829de5",
+        "sha256_in_prefix": "4812faec5043aaf1858839c1c9251d739ddd95fd2127bc29b197f85af4829de5",
+        "size_in_bytes": 1592
+      },
+      {
+        "_path": "include/magma_zlapack.h",
+        "path_type": "hardlink",
+        "sha256": "9a1559381bb68a495d9c2af590267d681429d266be5c866cf0156f197f1c2c52",
+        "sha256_in_prefix": "9a1559381bb68a495d9c2af590267d681429d266be5c866cf0156f197f1c2c52",
+        "size_in_bytes": 63990
+      },
+      {
+        "_path": "include/magma_zvbatched.h",
+        "path_type": "hardlink",
+        "sha256": "a835a7ad01c6879696f356755f206fe03ae26f5a62dd79e35e1978281b600741",
+        "sha256_in_prefix": "a835a7ad01c6879696f356755f206fe03ae26f5a62dd79e35e1978281b600741",
+        "size_in_bytes": 25203
+      },
+      {
+        "_path": "include/magmablas.h",
+        "path_type": "hardlink",
+        "sha256": "0608b5a684253ac42e09282bf4f75bedb335d50eac7148ae0e9c44b9c137bfae",
+        "sha256_in_prefix": "0608b5a684253ac42e09282bf4f75bedb335d50eac7148ae0e9c44b9c137bfae",
+        "size_in_bytes": 438
+      },
+      {
+        "_path": "include/magmablas_c.h",
+        "path_type": "hardlink",
+        "sha256": "19fcafbb37934a2e44d62f7e5ebf69d089a9cd0c9628a9ec52aba36230128d68",
+        "sha256_in_prefix": "19fcafbb37934a2e44d62f7e5ebf69d089a9cd0c9628a9ec52aba36230128d68",
+        "size_in_bytes": 43047
+      },
+      {
+        "_path": "include/magmablas_c_v1.h",
+        "path_type": "hardlink",
+        "sha256": "1f56b825ac1c41f84d28cc983288bfa9aaa1a8219af117a71f0141b05e109f8d",
+        "sha256_in_prefix": "1f56b825ac1c41f84d28cc983288bfa9aaa1a8219af117a71f0141b05e109f8d",
+        "size_in_bytes": 27961
+      },
+      {
+        "_path": "include/magmablas_c_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "052c13a16185104b31061ba7b5705c76a3adcef0a74d11402c012cce65c828d6",
+        "sha256_in_prefix": "052c13a16185104b31061ba7b5705c76a3adcef0a74d11402c012cce65c828d6",
+        "size_in_bytes": 7496
+      },
+      {
+        "_path": "include/magmablas_d.h",
+        "path_type": "hardlink",
+        "sha256": "0ad9c61e8ce39857ef436f3fe4ebd2f0765da1798ed3ec9d23901f87e8491f98",
+        "sha256_in_prefix": "0ad9c61e8ce39857ef436f3fe4ebd2f0765da1798ed3ec9d23901f87e8491f98",
+        "size_in_bytes": 40195
+      },
+      {
+        "_path": "include/magmablas_d_v1.h",
+        "path_type": "hardlink",
+        "sha256": "1497c78a851e673cfc5edeacecee55d1f802125cee71f6225877eeef70888d35",
+        "sha256_in_prefix": "1497c78a851e673cfc5edeacecee55d1f802125cee71f6225877eeef70888d35",
+        "size_in_bytes": 25881
+      },
+      {
+        "_path": "include/magmablas_d_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "b8ec8448f67b1d4aa24e6d8be37192ca5146c48ca26ab391b82338798fdb5ac1",
+        "sha256_in_prefix": "b8ec8448f67b1d4aa24e6d8be37192ca5146c48ca26ab391b82338798fdb5ac1",
+        "size_in_bytes": 7452
+      },
+      {
+        "_path": "include/magmablas_ds.h",
+        "path_type": "hardlink",
+        "sha256": "8bb6db19d74475c20f47fe22fa40e6040809204274c420303877a16ef744bdb7",
+        "sha256_in_prefix": "8bb6db19d74475c20f47fe22fa40e6040809204274c420303877a16ef744bdb7",
+        "size_in_bytes": 1675
+      },
+      {
+        "_path": "include/magmablas_ds_v1.h",
+        "path_type": "hardlink",
+        "sha256": "9f780c9dc702e4b53fae78f9f241f8dd3114d74d545f1d2bf0cc5b522b56ffd3",
+        "sha256_in_prefix": "9f780c9dc702e4b53fae78f9f241f8dd3114d74d545f1d2bf0cc5b522b56ffd3",
+        "size_in_bytes": 1626
+      },
+      {
+        "_path": "include/magmablas_ds_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "f468b28f5abb89ae38cfb1d436e6c5aeb81d0976a470963811fb6ff9970a8893",
+        "sha256_in_prefix": "f468b28f5abb89ae38cfb1d436e6c5aeb81d0976a470963811fb6ff9970a8893",
+        "size_in_bytes": 873
+      },
+      {
+        "_path": "include/magmablas_h.h",
+        "path_type": "hardlink",
+        "sha256": "a9336f432300619b3abe8e3c93d7ea0321b8d008e2d98de3a43d30c615bb5aa4",
+        "sha256_in_prefix": "a9336f432300619b3abe8e3c93d7ea0321b8d008e2d98de3a43d30c615bb5aa4",
+        "size_in_bytes": 1770
+      },
+      {
+        "_path": "include/magmablas_s.h",
+        "path_type": "hardlink",
+        "sha256": "dbfab88f5d9cf965261257988e6938f0150a7f5037daebd136bec9b8996fa108",
+        "sha256_in_prefix": "dbfab88f5d9cf965261257988e6938f0150a7f5037daebd136bec9b8996fa108",
+        "size_in_bytes": 39764
+      },
+      {
+        "_path": "include/magmablas_s_v1.h",
+        "path_type": "hardlink",
+        "sha256": "494cdf9e95d3e1feea9af905771e39cff40add758e606bf064b2615d83c7ac16",
+        "sha256_in_prefix": "494cdf9e95d3e1feea9af905771e39cff40add758e606bf064b2615d83c7ac16",
+        "size_in_bytes": 25550
+      },
+      {
+        "_path": "include/magmablas_s_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "a6739238adc9e537846fe15a9b85918e73fb57994c497b7539cfbf1e8b4077cf",
+        "sha256_in_prefix": "a6739238adc9e537846fe15a9b85918e73fb57994c497b7539cfbf1e8b4077cf",
+        "size_in_bytes": 7452
+      },
+      {
+        "_path": "include/magmablas_v1.h",
+        "path_type": "hardlink",
+        "sha256": "f167f5b98d583e61c3532a5d9be6300797d324c0e826f807f2eb4744e406dc66",
+        "sha256_in_prefix": "f167f5b98d583e61c3532a5d9be6300797d324c0e826f807f2eb4744e406dc66",
+        "size_in_bytes": 1752
+      },
+      {
+        "_path": "include/magmablas_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "a254d789919d95e66144257f0695007b4d651f664d54d65a0f86d26d8ed12d10",
+        "sha256_in_prefix": "a254d789919d95e66144257f0695007b4d651f664d54d65a0f86d26d8ed12d10",
+        "size_in_bytes": 2596
+      },
+      {
+        "_path": "include/magmablas_z.h",
+        "path_type": "hardlink",
+        "sha256": "818579055ec1566391b637eed2daefa64e22ee0226b0d029870065ec822ef628",
+        "sha256_in_prefix": "818579055ec1566391b637eed2daefa64e22ee0226b0d029870065ec822ef628",
+        "size_in_bytes": 43429
+      },
+      {
+        "_path": "include/magmablas_z_v1.h",
+        "path_type": "hardlink",
+        "sha256": "98a3c089822241638785f0ce5407c2d3dab81fc9ef588c5eec166df7e0796104",
+        "sha256_in_prefix": "98a3c089822241638785f0ce5407c2d3dab81fc9ef588c5eec166df7e0796104",
+        "size_in_bytes": 28240
+      },
+      {
+        "_path": "include/magmablas_z_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "93ca7cb072656a9d1f827b5135df1a55288cb64d95ad86233d2a54df1d70cd22",
+        "sha256_in_prefix": "93ca7cb072656a9d1f827b5135df1a55288cb64d95ad86233d2a54df1d70cd22",
+        "size_in_bytes": 7440
+      },
+      {
+        "_path": "include/magmablas_zc.h",
+        "path_type": "hardlink",
+        "sha256": "a4d30da6ea79fa46fba6b9a66a0a67a46f45d074c5b533929e8fe9b8c06505cf",
+        "sha256_in_prefix": "a4d30da6ea79fa46fba6b9a66a0a67a46f45d074c5b533929e8fe9b8c06505cf",
+        "size_in_bytes": 1719
+      },
+      {
+        "_path": "include/magmablas_zc_v1.h",
+        "path_type": "hardlink",
+        "sha256": "815276800cf2229db9809fcc2411ee8f3bcf0a1bdc86864641fdcf4efe305fdc",
+        "sha256_in_prefix": "815276800cf2229db9809fcc2411ee8f3bcf0a1bdc86864641fdcf4efe305fdc",
+        "size_in_bytes": 1667
+      },
+      {
+        "_path": "include/magmablas_zc_v1_map.h",
+        "path_type": "hardlink",
+        "sha256": "a1a1c3f11e6b482fd98fcc76c638d07259b1b01e51635cbc6468ef278ce86604",
+        "sha256_in_prefix": "a1a1c3f11e6b482fd98fcc76c638d07259b1b01e51635cbc6468ef278ce86604",
+        "size_in_bytes": 812
+      },
+      {
+        "_path": "lib/libmagma.a",
+        "path_type": "hardlink",
+        "sha256": "da2a1a183a7094554bdf60ddeb1bbd20ebaef98676703b110b02f20af79e9795",
+        "sha256_in_prefix": "da2a1a183a7094554bdf60ddeb1bbd20ebaef98676703b110b02f20af79e9795",
+        "size_in_bytes": 132475216
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "pytorch/linux-64::magma-cuda110==2.5.2=1",
+  "subdir": "linux-64",
+  "timestamp": 1598417225248,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/pytorch/linux-64/magma-cuda110-2.5.2-1.tar.bz2",
+  "version": "2.5.2"
+}

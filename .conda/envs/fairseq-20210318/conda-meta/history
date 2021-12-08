@@ -1,0 +1,124 @@
+==> 2021-09-03 03:14:03 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda create --clone /private/home/myleott/.conda/envs/fairseq-20210318-py38 -n fairseq-20210318
+# conda version: 4.5.8
++defaults::_libgcc_mutex-0.1-main
++defaults::blas-1.0-mkl
++defaults::brotlipy-0.7.0-py38h27cfd23_1003
++defaults::bzip2-1.0.8-h7b6447c_0
++defaults::ca-certificates-2021.1.19-h06a4308_1
++defaults::certifi-2020.12.5-py38h06a4308_0
++defaults::cffi-1.14.5-py38h261ae71_0
++defaults::chardet-4.0.0-py38h06a4308_1003
++defaults::cmake-3.19.6-h973ab73_0
++defaults::cryptography-3.4.6-py38hd23ed53_0
++defaults::dataclasses-0.8-pyh6d0b6a4_7
++defaults::expat-2.2.10-he6710b0_2
++defaults::future-0.18.2-py38_1
++defaults::idna-2.10-pyhd3eb1b0_0
++defaults::intel-openmp-2020.2-254
++defaults::krb5-1.18.2-h173b8e3_0
++defaults::ld_impl_linux-64-2.33.1-h53a641e_7
++defaults::libcurl-7.71.1-h20c2e04_1
++defaults::libedit-3.1.20210216-h27cfd23_1
++defaults::libffi-3.3-he6710b0_2
++defaults::libgcc-ng-9.1.0-hdf63c60_0
++defaults::libssh2-1.9.0-h1ba5d50_1
++defaults::libstdcxx-ng-9.1.0-hdf63c60_0
++defaults::libuv-1.40.0-h7b6447c_0
++defaults::lz4-c-1.9.3-h2531618_0
++defaults::mkl-2020.2-256
++defaults::mkl-include-2020.2-256
++defaults::mkl-service-2.3.0-py38he904b0f_0
++defaults::mkl_fft-1.3.0-py38h54f3939_0
++defaults::mkl_random-1.1.1-py38h0573a6f_0
++defaults::ncurses-6.2-he6710b0_1
++defaults::ninja-1.10.2-py38hff7bd54_0
++defaults::numpy-1.19.2-py38h54aff64_0
++defaults::numpy-base-1.19.2-py38hfa32c7d_0
++defaults::openssl-1.1.1j-h27cfd23_0
++defaults::pip-21.0.1-py38h06a4308_0
++defaults::pycparser-2.20-py_2
++defaults::pyopenssl-20.0.1-pyhd3eb1b0_1
++defaults::pysocks-1.7.1-py38h06a4308_0
++defaults::python-3.8.8-hdb3f193_4
++defaults::pyyaml-5.4.1-py38h27cfd23_1
++defaults::readline-8.1-h27cfd23_0
++defaults::requests-2.25.1-pyhd3eb1b0_0
++defaults::rhash-1.4.1-h3c74f83_1
++defaults::setuptools-52.0.0-py38h06a4308_0
++defaults::six-1.15.0-pyhd3eb1b0_0
++defaults::sqlite-3.35.1-hdfb4753_0
++defaults::tk-8.6.10-hbc83047_0
++defaults::typing_extensions-3.7.4.3-pyha847dfd_0
++defaults::urllib3-1.26.4-pyhd3eb1b0_0
++defaults::wheel-0.36.2-pyhd3eb1b0_0
++defaults::xz-5.2.5-h7b6447c_0
++defaults::yaml-0.2.5-h7b6447c_0
++defaults::zlib-1.2.11-h7b6447c_3
++defaults::zstd-1.4.5-h9ceee32_0
++pytorch::magma-cuda110-2.5.2-1
+# update specs: ['defaults/linux-64::_libgcc_mutex==0.1=main', 'defaults/linux-64::blas==1.0=mkl', 'defaults/linux-64::ca-certificates==2021.1.19=h06a4308_1', 'defaults/linux-64::ld_impl_linux-64==2.33.1=h53a641e_7', 'defaults/linux-64::libstdcxx-ng==9.1.0=hdf63c60_0', 'pytorch/linux-64::magma-cuda110==2.5.2=1', 'defaults/linux-64::mkl-include==2020.2=256', 'defaults/linux-64::libgcc-ng==9.1.0=hdf63c60_0', 'defaults/linux-64::bzip2==1.0.8=h7b6447c_0', 'defaults/linux-64::expat==2.2.10=he6710b0_2', 'defaults/linux-64::libffi==3.3=he6710b0_2', 'defaults/linux-64::libuv==1.40.0=h7b6447c_0', 'defaults/linux-64::lz4-c==1.9.3=h2531618_0', 'defaults/linux-64::ncurses==6.2=he6710b0_1', 'defaults/linux-64::openssl==1.1.1j=h27cfd23_0', 'defaults/linux-64::xz==5.2.5=h7b6447c_0', 'defaults/linux-64::yaml==0.2.5=h7b6447c_0', 'defaults/linux-64::zlib==1.2.11=h7b6447c_3', 'defaults/linux-64::libedit==3.1.20210216=h27cfd23_1', 'defaults/linux-64::libssh2==1.9.0=h1ba5d50_1', 'defaults/linux-64::readline==8.1=h27cfd23_0', 'defaults/linux-64::rhash==1.4.1=h3c74f83_1', 'defaults/linux-64::tk==8.6.10=hbc83047_0', 'defaults/linux-64::zstd==1.4.5=h9ceee32_0', 'defaults/linux-64::krb5==1.18.2=h173b8e3_0', 'defaults/linux-64::sqlite==3.35.1=hdfb4753_0', 'defaults/linux-64::libcurl==7.71.1=h20c2e04_1', 'defaults/linux-64::python==3.8.8=hdb3f193_4', 'defaults/linux-64::certifi==2020.12.5=py38h06a4308_0', 'defaults/linux-64::chardet==4.0.0=py38h06a4308_1003', 'defaults/linux-64::cmake==3.19.6=h973ab73_0', 'defaults/noarch::dataclasses==0.8=pyh6d0b6a4_7', 'defaults/linux-64::future==0.18.2=py38_1', 'defaults/noarch::idna==2.10=pyhd3eb1b0_0', 'defaults/linux-64::ninja==1.10.2=py38hff7bd54_0', 'defaults/noarch::pycparser==2.20=py_2', 'defaults/linux-64::pysocks==1.7.1=py38h06a4308_0', 'defaults/linux-64::pyyaml==5.4.1=py38h27cfd23_1', 'defaults/noarch::six==1.15.0=pyhd3eb1b0_0', 'defaults/noarch::typing_extensions==3.7.4.3=pyha847dfd_0', 'defaults/noarch::wheel==0.36.2=pyhd3eb1b0_0', 'defaults/linux-64::cffi==1.14.5=py38h261ae71_0', 'defaults/linux-64::setuptools==52.0.0=py38h06a4308_0', 'defaults/linux-64::brotlipy==0.7.0=py38h27cfd23_1003', 'defaults/linux-64::cryptography==3.4.6=py38hd23ed53_0', 'defaults/linux-64::pip==21.0.1=py38h06a4308_0', 'defaults/noarch::pyopenssl==20.0.1=pyhd3eb1b0_1', 'defaults/noarch::urllib3==1.26.4=pyhd3eb1b0_0', 'defaults/noarch::requests==2.25.1=pyhd3eb1b0_0', 'defaults/linux-64::intel-openmp==2020.2=254', 'defaults/linux-64::mkl==2020.2=256', 'defaults/linux-64::mkl-service==2.3.0=py38he904b0f_0', 'defaults/linux-64::mkl_fft==1.3.0=py38h54f3939_0', 'defaults/linux-64::mkl_random==1.1.1=py38h0573a6f_0', 'defaults/linux-64::numpy==1.19.2=py38h54aff64_0', 'defaults/linux-64::numpy-base==1.19.2=py38hfa32c7d_0']
+==> 2021-09-03 05:50:22 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda install -c anaconda ipykernel
+# conda version: 4.5.8
++anaconda::backcall-0.2.0-py_0
++anaconda::decorator-4.4.2-py_0
++anaconda::ipykernel-5.3.4-py38h5ca1d4c_0
++anaconda::ipython-7.18.1-py38h5ca1d4c_0
++anaconda::ipython_genutils-0.2.0-py38_0
++anaconda::jedi-0.17.2-py38_0
++anaconda::jupyter_client-6.1.7-py_0
++anaconda::jupyter_core-4.6.3-py38_0
++anaconda::libsodium-1.0.18-h7b6447c_0
++anaconda::parso-0.7.0-py_0
++anaconda::pexpect-4.8.0-py38_0
++anaconda::pickleshare-0.7.5-py38_1000
++anaconda::prompt-toolkit-3.0.8-py_0
++anaconda::ptyprocess-0.6.0-py38_0
++anaconda::pygments-2.7.1-py_0
++anaconda::python-dateutil-2.8.1-py_0
++anaconda::pyzmq-19.0.2-py38he6710b0_1
++anaconda::tornado-6.0.4-py38h7b6447c_1
++anaconda::traitlets-5.0.5-py_0
++anaconda::wcwidth-0.2.5-py_0
++anaconda::zeromq-4.3.3-he6710b0_3
+# update specs: ['ipykernel']
+==> 2021-09-06 07:00:33 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda install pandas
+# conda version: 4.5.8
++defaults::bottleneck-1.3.2-py38heb32a55_1
++defaults::numexpr-2.7.3-py38hb2eb853_0
++defaults::pandas-1.3.2-py38h8c16a72_0
++defaults::pytz-2021.1-pyhd3eb1b0_0
+# update specs: ['pandas']
+==> 2021-10-13 03:45:34 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda install spacy
+# conda version: 4.5.8
++defaults::attrs-21.2.0-pyhd3eb1b0_0
++defaults::catalogue-1.0.0-py38_1
++defaults::cymem-2.0.5-py38h2531618_0
++defaults::cython-blis-0.7.4-py38h27cfd23_1
++defaults::importlib-metadata-4.8.1-py38h06a4308_0
++defaults::importlib_metadata-4.8.1-hd3eb1b0_0
++defaults::jsonschema-3.0.2-py38_0
++defaults::murmurhash-1.0.5-py38h2531618_0
++defaults::plac-1.1.0-py38_1
++defaults::preshed-3.0.5-py38h2531618_4
++defaults::pyrsistent-0.17.3-py38h7b6447c_0
++defaults::spacy-2.3.5-py38hff7bd54_0
++defaults::srsly-1.0.5-py38h2531618_0
++defaults::thinc-7.4.5-py38h9a67853_0
++defaults::tqdm-4.62.2-pyhd3eb1b0_1
++defaults::wasabi-0.8.2-pyhd3eb1b0_0
++defaults::zipp-3.6.0-pyhd3eb1b0_0
+# update specs: ['spacy']
+==> 2021-10-21 13:29:16 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda install invoke
+# conda version: 4.5.8
++defaults::invoke-1.6.0-py38h06a4308_0
+# update specs: ['invoke']
+==> 2021-12-01 07:02:38 <==
+# cmd: /public/apps/anaconda3/5.0.1/bin/conda install editdistance
+# conda version: 4.5.8
++defaults::editdistance-0.5.3-py38h2531618_0
+# update specs: ['editdistance']

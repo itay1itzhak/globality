@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "/private/home/itayitzhak/.conda/envs/fairseq-20210318/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3",
+ "language": "python"
+}
