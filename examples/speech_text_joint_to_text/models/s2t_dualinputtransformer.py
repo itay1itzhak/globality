@@ -8,22 +8,22 @@ from collections import namedtuple
 
 import torch
 import torch.nn as nn
-from fairseq import checkpoint_utils
-from fairseq import utils
-from fairseq.models import (
+from fairseq_org import checkpoint_utils
+from fairseq_org import utils
+from fairseq_org.models import (
     FairseqEncoder,
     FairseqDecoder,
     FairseqEncoderDecoderModel,
     register_model,
     register_model_architecture,
 )
-from fairseq.models.fairseq_encoder import EncoderOut
-from fairseq.models.speech_to_text import (
+from fairseq_org.models.fairseq_encoder import EncoderOut
+from fairseq_org.models.speech_to_text import (
     TransformerDecoder,
     S2TTransformerEncoder,
 )
-from fairseq.models.transformer import TransformerEncoder
-from fairseq.modules import (
+from fairseq_org.models.transformer import TransformerEncoder
+from fairseq_org.modules import (
     TransformerEncoderLayer,
     GradMultiply,
     LayerNorm,

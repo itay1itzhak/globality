@@ -9,16 +9,16 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Tuple
 
 import torch
-from fairseq import utils
-from fairseq.data import (
+from fairseq_org import utils
+from fairseq_org.data import (
     Dictionary,
     TokenBlockDataset,
     data_utils,
     iterators,
 )
-from fairseq.dataclass import FairseqDataclass
-from fairseq.distributed import utils as dist_utils
-from fairseq.tasks import FairseqTask, register_task
+from fairseq_org.dataclass import FairseqDataclass
+from fairseq_org.distributed import utils as dist_utils
+from fairseq_org.tasks import FairseqTask, register_task
 from omegaconf import II
 
 

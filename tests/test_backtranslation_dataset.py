@@ -7,12 +7,12 @@ import unittest
 
 import tests.utils as test_utils
 import torch
-from fairseq.data import (
+from fairseq_org.data import (
     BacktranslationDataset,
     LanguagePairDataset,
     TransformEosDataset,
 )
-from fairseq.sequence_generator import SequenceGenerator
+from fairseq_org.sequence_generator import SequenceGenerator
 
 
 class TestBacktranslationDataset(unittest.TestCase):

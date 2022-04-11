@@ -29,7 +29,7 @@ import torch
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-from fairseq.data.audio.audio_utils import get_waveform
+from fairseq_org.data.audio.audio_utils import get_waveform
 
 
 log = logging.getLogger(__name__)

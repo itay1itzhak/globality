@@ -8,7 +8,7 @@ import os
 
 import numpy as np
 import torch
-from fairseq.data import (
+from fairseq_org.data import (
     Dictionary,
     IdDataset,
     ListDataset,
@@ -21,7 +21,7 @@ from fairseq.data import (
     data_utils,
     encoders,
 )
-from fairseq.tasks import LegacyFairseqTask, register_task
+from fairseq_org.tasks import LegacyFairseqTask, register_task
 
 
 @register_task("commonsense_qa")
@@ -170,7 +170,7 @@ class CommonsenseQATask(LegacyFairseqTask):
         return self.datasets[split]
 
     def build_model(self, args):
-        from fairseq import models
+        from fairseq_org import models
 
         model = models.build_model(args, self)
 

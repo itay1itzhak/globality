@@ -7,7 +7,7 @@ import collections
 import unittest
 
 import numpy as np
-from fairseq.data import ListDataset, ResamplingDataset
+from fairseq_org.data import ListDataset, ResamplingDataset
 
 
 class TestResamplingDataset(unittest.TestCase):

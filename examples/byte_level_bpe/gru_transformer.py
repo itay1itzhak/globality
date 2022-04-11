@@ -10,8 +10,8 @@
 
 import torch.nn as nn
 import torch.nn.functional as F
-from fairseq.models import register_model, register_model_architecture
-from fairseq.models.transformer import TransformerEncoder, TransformerModel
+from fairseq_org.models import register_model, register_model_architecture
+from fairseq_org.models.transformer import TransformerEncoder, TransformerModel
 
 
 @register_model("gru_transformer")

@@ -6,7 +6,7 @@
 
 import argparse
 
-from fairseq.data import Dictionary, data_utils, indexed_dataset
+from fairseq_org.data import Dictionary, data_utils, indexed_dataset
 
 
 def get_parser():

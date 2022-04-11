@@ -7,10 +7,10 @@ from dataclasses import dataclass, field
 import torch
 from omegaconf import II
 
-from fairseq import metrics, utils
-from fairseq.dataclass import ChoiceEnum
-from fairseq.tasks import register_task
-from fairseq.tasks.translation import TranslationConfig, TranslationTask
+from fairseq_org import metrics, utils
+from fairseq_org.dataclass import ChoiceEnum
+from fairseq_org.tasks import register_task
+from fairseq_org.tasks.translation import TranslationConfig, TranslationTask
 
 from .logsumexp_moe import LogSumExpMoE
 from .mean_pool_gating_network import MeanPoolGatingNetwork
@@ -102,7 +102,7 @@ class TranslationMoETask(TranslationTask):
         super().__init__(cfg, src_dict, tgt_dict)
 
     def build_model(self, cfg):
-        from fairseq import models
+        from fairseq_org import models
 
         model = models.build_model(cfg, self)
         if not self.uniform_prior and not hasattr(model, "gating_network"):

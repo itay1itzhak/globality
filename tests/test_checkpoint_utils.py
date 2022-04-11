@@ -11,7 +11,7 @@ import unittest
 from io import StringIO
 from unittest.mock import patch
 
-from fairseq import checkpoint_utils
+from fairseq_org import checkpoint_utils
 from omegaconf import OmegaConf
 
 from tests.utils import (

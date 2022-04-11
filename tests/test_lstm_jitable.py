@@ -8,9 +8,9 @@ import tempfile
 import unittest
 
 import torch
-from fairseq.data.dictionary import Dictionary
-from fairseq.models.lstm import LSTMModel
-from fairseq.tasks.fairseq_task import LegacyFairseqTask
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.models.lstm import LSTMModel
+from fairseq_org.tasks.fairseq_task import LegacyFairseqTask
 
 
 DEFAULT_TEST_VOCAB_SIZE = 100

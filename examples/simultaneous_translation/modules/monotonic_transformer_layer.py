@@ -3,7 +3,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from fairseq.modules import TransformerDecoderLayer, TransformerEncoderLayer
+from fairseq_org.modules import TransformerDecoderLayer, TransformerEncoderLayer
 
 from . import build_monotonic_attention
 

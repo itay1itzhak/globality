@@ -33,7 +33,7 @@ class TestFileChunker(unittest.TestCase):
             shutil.rmtree(cls._tmpdir)  # type: ignore
 
     def test_find_offsets(self):
-        from fairseq.file_chunker_utils import find_offsets
+        from fairseq_org.file_chunker_utils import find_offsets
 
         offsets = find_offsets(self._tmpfile, self._num_splits)
         self.assertEqual(len(offsets), self._num_splits + 1)
@@ -48,7 +48,7 @@ class TestFileChunker(unittest.TestCase):
         self.assertEqual(last, self._num_bytes * self._num_lines)
 
     def test_readchunks(self):
-        from fairseq.file_chunker_utils import Chunker, find_offsets
+        from fairseq_org.file_chunker_utils import Chunker, find_offsets
 
         offsets = find_offsets(self._tmpfile, self._num_splits)
         for start, end in zip(offsets, offsets[1:]):

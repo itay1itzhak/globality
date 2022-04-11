@@ -7,9 +7,9 @@ import math
 from multiprocessing import Pool
 
 import numpy as np
-from fairseq import options
-from fairseq.data import dictionary
-from fairseq.scoring import bleu
+from fairseq_org import options
+from fairseq_org.data import dictionary
+from fairseq_org.scoring import bleu
 
 from examples.noisychannel import (
     rerank_generate,

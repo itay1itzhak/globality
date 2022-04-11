@@ -6,7 +6,7 @@
 import unittest
 
 import torch
-from fairseq import utils
+from fairseq_org import utils
 
 
 class TestUtils(unittest.TestCase):

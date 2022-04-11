@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 import torch
-from fairseq.models.ema import EMA
+from fairseq_org.models.ema import EMA
 
 
 class DummyModule(torch.nn.Module):

@@ -220,6 +220,17 @@ class TransformerConfig(FairseqDataclass):
         metadata={"help": "don't add an extra layernorm after the last decoder block"},
     )
 
+    # itay
+    attention_heads_dropout: float = field(
+        default=0.0,
+        metadata={"help": "sets attention head dropout in the encoder"},
+    )
+
+    remove_eos: bool = field(
+        default=False,
+        metadata={"help": "removes eos from source"},
+    )
+
     # We need to make this hierarchical dataclass like the flat namespace
     # __getattr__ and __setattr__ here allow backward compatibility
     # for subclasses of Transformer(Legacy) that depend on read/write on

@@ -4,7 +4,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import torch
-import fairseq
+import fairseq_org
 import soundfile as sf
 import torch.nn.functional as F
 
@@ -20,7 +20,7 @@ class HubertFeatureReader:
             model,
             cfg,
             task,
-        ) = fairseq.checkpoint_utils.load_model_ensemble_and_task(
+        ) = fairseq_org.checkpoint_utils.load_model_ensemble_and_task(
             [checkpoint_path]
         )
         self.model = model[0].eval().cuda()

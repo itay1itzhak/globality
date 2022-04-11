@@ -6,7 +6,7 @@
 import os
 from contextlib import redirect_stdout
 
-from fairseq import options
+from fairseq_org import options
 from fairseq_cli import generate
 
 from examples.noisychannel import rerank_options, rerank_utils

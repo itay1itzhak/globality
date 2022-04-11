@@ -5,8 +5,8 @@ import numpy as np
 import torch
 import torchaudio.compliance.kaldi as kaldi
 import yaml
-from fairseq import checkpoint_utils, tasks
-from fairseq.file_io import PathManager
+from fairseq_org import checkpoint_utils, tasks
+from fairseq_org.file_io import PathManager
 
 try:
     from simuleval import READ_ACTION, WRITE_ACTION, DEFAULT_EOS

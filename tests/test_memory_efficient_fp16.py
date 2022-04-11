@@ -8,8 +8,8 @@ import logging
 import unittest
 
 import torch
-from fairseq.optim.adam import FairseqAdam
-from fairseq.optim.fp16_optimizer import MemoryEfficientFP16Optimizer
+from fairseq_org.optim.adam import FairseqAdam
+from fairseq_org.optim.fp16_optimizer import MemoryEfficientFP16Optimizer
 from omegaconf import OmegaConf
 
 

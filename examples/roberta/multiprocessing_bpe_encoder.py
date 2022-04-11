@@ -11,7 +11,7 @@ import sys
 from collections import Counter
 from multiprocessing import Pool
 
-from fairseq.data.encoders.gpt2_bpe import get_encoder
+from fairseq_org.data.encoders.gpt2_bpe import get_encoder
 
 
 def main():

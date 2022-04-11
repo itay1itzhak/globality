@@ -7,7 +7,7 @@ from collections import OrderedDict
 
 import numpy as np
 
-from fairseq.data import BaseWrapperDataset, FairseqDataset, iterators
+from fairseq_org.data import BaseWrapperDataset, FairseqDataset, iterators
 
 
 class MultiItr(object):

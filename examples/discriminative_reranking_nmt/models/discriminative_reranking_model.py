@@ -4,16 +4,16 @@ import os
 import torch
 import torch.nn as nn
 
-from fairseq import utils
-from fairseq.dataclass import ChoiceEnum, FairseqDataclass
-from fairseq.models import (
+from fairseq_org import utils
+from fairseq_org.dataclass import ChoiceEnum, FairseqDataclass
+from fairseq_org.models import (
     BaseFairseqModel,
     register_model,
 )
 
-from fairseq.models.roberta.model import RobertaClassificationHead
+from fairseq_org.models.roberta.model import RobertaClassificationHead
 
-from fairseq.modules import (
+from fairseq_org.modules import (
     LayerNorm,
     TransformerSentenceEncoder,
     TransformerSentenceEncoderLayer,
@@ -102,7 +102,7 @@ class BertRanker(BaseRanker):
         if os.path.isfile(init_model):
             print(f"initialize weight from {init_model}")
 
-            from fairseq import hub_utils
+            from fairseq_org import hub_utils
 
             x = hub_utils.from_pretrained(
                 os.path.dirname(init_model),

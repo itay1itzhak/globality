@@ -3,7 +3,7 @@ import unittest
 from typing import Any, Dict, Sequence
 
 import torch
-from fairseq.models import transformer
+from fairseq_org.models import transformer
 
 from tests.test_roberta import FakeTask
 

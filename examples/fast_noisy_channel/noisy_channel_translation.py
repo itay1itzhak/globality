@@ -3,11 +3,11 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from fairseq.tasks.translation import TranslationTask
-from fairseq.tasks.language_modeling import LanguageModelingTask
-from fairseq import checkpoint_utils
+from fairseq_org.tasks.translation import TranslationTask
+from fairseq_org.tasks.language_modeling import LanguageModelingTask
+from fairseq_org import checkpoint_utils
 import argparse
-from fairseq.tasks import register_task
+from fairseq_org.tasks import register_task
 import torch
 
 

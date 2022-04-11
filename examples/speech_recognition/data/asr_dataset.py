@@ -6,7 +6,7 @@
 import os
 
 import numpy as np
-from fairseq.data import FairseqDataset
+from fairseq_org.data import FairseqDataset
 
 from . import data_utils
 from .collaters import Seq2SeqCollater

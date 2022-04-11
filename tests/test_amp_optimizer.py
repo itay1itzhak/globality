@@ -9,7 +9,7 @@ import unittest
 
 import torch
 from torch.cuda.amp import autocast, GradScaler
-from fairseq.optim import build_optimizer
+from fairseq_org.optim import build_optimizer
 
 
 @unittest.skipIf(not torch.cuda.is_available(), "test requires a GPU")

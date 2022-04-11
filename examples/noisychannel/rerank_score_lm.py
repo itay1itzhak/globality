@@ -5,7 +5,7 @@
 
 import os
 
-from fairseq import options
+from fairseq_org import options
 
 from examples.noisychannel import rerank_options, rerank_utils
 

@@ -44,15 +44,16 @@ from fairseq.trainer import Trainer
 from omegaconf import DictConfig, OmegaConf
 
 
-
-
 def main(cfg: FairseqConfig) -> None:
     if isinstance(cfg, argparse.Namespace):
         cfg = convert_namespace_to_omegaconf(cfg)
 
     utils.import_user_module(cfg.common)
 
-    if distributed_utils.is_master(cfg.distributed_training) and "job_logging_cfg" in cfg:
+    if (
+        distributed_utils.is_master(cfg.distributed_training)
+        and "job_logging_cfg" in cfg
+    ):
         # make hydra logging work with ddp (see # see https://github.com/facebookresearch/hydra/issues/1126)
         logging.config.dictConfig(OmegaConf.to_container(cfg.job_logging_cfg))
 
@@ -95,6 +96,7 @@ def main(cfg: FairseqConfig) -> None:
             model = fsdp_wrap(task.build_model(cfg.model))
     else:
         model = task.build_model(cfg.model)
+
     criterion = task.build_criterion(cfg.criterion)
     logger.info(model)
     logger.info("task: {}".format(task.__class__.__name__))
@@ -102,15 +104,25 @@ def main(cfg: FairseqConfig) -> None:
     logger.info("criterion: {}".format(criterion.__class__.__name__))
     logger.info(
         "num. shared model params: {:,} (num. trained: {:,})".format(
-            sum(p.numel() for p in model.parameters() if not getattr(p, "expert", False)),
-            sum(p.numel() for p in model.parameters() if not getattr(p, "expert", False) and p.requires_grad)
+            sum(
+                p.numel() for p in model.parameters() if not getattr(p, "expert", False)
+            ),
+            sum(
+                p.numel()
+                for p in model.parameters()
+                if not getattr(p, "expert", False) and p.requires_grad
+            ),
         )
     )
 
     logger.info(
         "num. expert model params: {} (num. trained: {})".format(
             sum(p.numel() for p in model.parameters() if getattr(p, "expert", False)),
-            sum(p.numel() for p in model.parameters() if getattr(p, "expert", False) and p.requires_grad),
+            sum(
+                p.numel()
+                for p in model.parameters()
+                if getattr(p, "expert", False) and p.requires_grad
+            ),
         )
     )
 
@@ -121,7 +133,12 @@ def main(cfg: FairseqConfig) -> None:
         task.load_dataset("valid", combine=True, epoch=1)
     else:
         for valid_sub_split in cfg.dataset.valid_subset.split(","):
-            task.load_dataset(valid_sub_split, combine=False, epoch=1)
+            task.load_dataset(
+                valid_sub_split,
+                combine=False,
+                is_remove_eos=cfg.common.is_remove_eos,
+                epoch=1,
+            )
 
     # (optionally) Configure quantization
     if cfg.common.quantization_config_path is not None:
@@ -145,10 +162,56 @@ def main(cfg: FairseqConfig) -> None:
     )
     logger.info(
         "max tokens per device = {} and max sentences per device = {}".format(
-            cfg.dataset.max_tokens,
-            cfg.dataset.batch_size,
+            cfg.dataset.max_tokens, cfg.dataset.batch_size,
         )
     )
+
+    # itay
+    def load_attn_weights(model, attn_weights_checkpoint_file_name):
+        print(
+            f"Loading attention weights from pretrained model: {attn_weights_checkpoint_file_name}"
+        )
+        # decoder = TransformerDecoder(
+        #     args, task.target_dictionary, embed_tokens, no_encoder_attn=True, output_projection=None
+        # )
+
+        # load weights from checkpoint
+        pretrained_state = checkpoint_utils.load_checkpoint_to_cpu(
+            attn_weights_checkpoint_file_name, load_on_all_ranks=True
+        )
+
+        # layers_to_delete = []
+        model_state_dict = model.state_dict()
+
+        #         self.model.load_state_dict(
+        #     state["model"], strict=True, model_cfg=self.cfg.model
+        # )
+
+        # copying the following:
+        # encoder.layers.0.self_attn.k_proj.weight
+        # encoder.layers.0.self_attn.k_proj.bias
+        # encoder.layers.0.self_attn.v_proj.weight
+        # encoder.layers.0.self_attn.v_proj.bias
+        # encoder.layers.0.self_attn.q_proj.weight
+        # encoder.layers.0.self_attn.q_proj.bias
+        # encoder.layers.0.self_attn.out_proj.weight
+        # encoder.layers.0.self_attn.out_proj.bias
+        # encoder.layers.0.self_attn_layer_norm.weight
+        # encoder.layers.0.self_attn_layer_norm.bias
+        for layer_name in pretrained_state["model"]:
+            if layer_name.startswith("encoder.layers.0.self_attn."):
+                model_state_dict[layer_name] = pretrained_state["model"][layer_name]
+                # layers_to_delete.append(layer_name)
+
+        # for layer_name in layers_to_delete:
+        #     del state["model"][layer_name]
+
+        model.load_state_dict(model_state_dict, strict=True)
+
+    # itay
+    attn_weights_checkpoint_file_name = "/checkpoint/itayitzhak/trained_models/opus/all/remove_eos_not_permuted_seed_1/checkpoint_best.pt"
+    # load only attention layers weights from pretrained model
+    # load_attn_weights(model, attn_weights_checkpoint_file_name)
 
     # Load the latest checkpoint if one is available and restore the
     # corresponding train iterator
@@ -160,6 +223,7 @@ def main(cfg: FairseqConfig) -> None:
     )
     if cfg.common.tpu:
         import torch_xla.core.xla_model as xm
+
         xm.rendezvous("load_checkpoint")  # wait for all workers
 
     max_epoch = cfg.optimization.max_epoch or math.inf
@@ -376,15 +440,19 @@ def validate_and_save(
         )
     )
     do_validate = (
-        (not end_of_epoch and do_save)  # validate during mid-epoch saves
-        or (end_of_epoch and epoch_itr.epoch % cfg.dataset.validate_interval == 0)
-        or should_stop
-        or (
-            cfg.dataset.validate_interval_updates > 0
-            and num_updates > 0
-            and num_updates % cfg.dataset.validate_interval_updates == 0
+        (
+            (not end_of_epoch and do_save)  # validate during mid-epoch saves
+            or (end_of_epoch and epoch_itr.epoch % cfg.dataset.validate_interval == 0)
+            or should_stop
+            or (
+                cfg.dataset.validate_interval_updates > 0
+                and num_updates > 0
+                and num_updates % cfg.dataset.validate_interval_updates == 0
+            )
         )
-    ) and not cfg.dataset.disable_validation and num_updates >= cfg.dataset.validate_after_updates
+        and not cfg.dataset.disable_validation
+        and num_updates >= cfg.dataset.validate_after_updates
+    )
 
     # Validate
     valid_losses = [None]
@@ -457,7 +525,10 @@ def validate(
         # don't pollute other aggregators (e.g., train meters)
         with metrics.aggregate(new_root=True) as agg:
             for i, sample in enumerate(progress):
-                if cfg.dataset.max_valid_steps is not None and i > cfg.dataset.max_valid_steps:
+                if (
+                    cfg.dataset.max_valid_steps is not None
+                    and i > cfg.dataset.max_valid_steps
+                ):
                     break
                 trainer.valid_step(sample)
 
@@ -497,7 +568,9 @@ def cli_main(
 
     if cfg.common.use_plasma_view:
         server = PlasmaStore(path=cfg.common.plasma_path)
-        logger.info(f"Started plasma server pid {server.server.pid} {cfg.common.plasma_path}")
+        logger.info(
+            f"Started plasma server pid {server.server.pid} {cfg.common.plasma_path}"
+        )
 
     if args.profile:
         with torch.cuda.profiler.profile():

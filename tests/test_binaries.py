@@ -14,7 +14,7 @@ import unittest
 from io import StringIO
 from typing import List, Dict
 import torch
-from fairseq import options
+from fairseq_org import options
 from fairseq_cli import eval_lm, train
 from tests.utils import (
     create_dummy_data,

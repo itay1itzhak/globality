@@ -4,7 +4,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import torch
-from fairseq.search import Search
+from fairseq_org.search import Search
 
 
 class NoisyChannelBeamSearch(Search):

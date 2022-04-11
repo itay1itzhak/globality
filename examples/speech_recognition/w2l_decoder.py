@@ -19,10 +19,10 @@ from collections import deque, namedtuple
 import numpy as np
 import torch
 from examples.speech_recognition.data.replabels import unpack_replabels
-from fairseq import tasks
-from fairseq.utils import apply_to_sample
+from fairseq_org import tasks
+from fairseq_org.utils import apply_to_sample
 from omegaconf import open_dict
-from fairseq.dataclass.utils import convert_namespace_to_omegaconf
+from fairseq_org.dataclass.utils import convert_namespace_to_omegaconf
 
 
 try:

@@ -10,8 +10,8 @@ import tempfile
 import unittest
 
 import torch
-from fairseq import tokenizer
-from fairseq.data import Dictionary
+from fairseq_org import tokenizer
+from fairseq_org.data import Dictionary
 
 
 class TestDictionary(unittest.TestCase):

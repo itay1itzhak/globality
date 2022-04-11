@@ -6,8 +6,8 @@
 import unittest
 
 import torch
-from fairseq.data import LanguagePairDataset, TokenBlockDataset
-from fairseq.data.concat_dataset import ConcatDataset
+from fairseq_org.data import LanguagePairDataset, TokenBlockDataset
+from fairseq_org.data.concat_dataset import ConcatDataset
 from tests.test_train import mock_dict
 
 

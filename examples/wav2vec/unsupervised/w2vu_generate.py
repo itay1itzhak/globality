@@ -26,10 +26,10 @@ import torch
 
 from hydra.core.hydra_config import HydraConfig
 
-from fairseq import checkpoint_utils, progress_bar, tasks, utils
-from fairseq.data.data_utils import post_process
-from fairseq.dataclass.configs import FairseqDataclass, FairseqConfig
-from fairseq.logging.meters import StopwatchMeter
+from fairseq_org import checkpoint_utils, progress_bar, tasks, utils
+from fairseq_org.data.data_utils import post_process
+from fairseq_org.dataclass.configs import FairseqDataclass, FairseqConfig
+from fairseq_org.logging.meters import StopwatchMeter
 from omegaconf import open_dict
 
 from examples.speech_recognition.kaldi.kaldi_decoder import KaldiDecoderConfig

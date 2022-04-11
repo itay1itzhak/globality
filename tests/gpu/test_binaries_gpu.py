@@ -12,7 +12,7 @@ import unittest
 from io import StringIO
 
 import torch
-from fairseq import options
+from fairseq_org import options
 from fairseq_cli import train
 from tests.utils import (
     create_dummy_data,

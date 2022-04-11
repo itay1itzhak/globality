@@ -192,6 +192,7 @@ class SequenceGenerator(nn.Module):
         prefix_tokens: Optional[Tensor] = None,
         constraints: Optional[Tensor] = None,
         bos_token: Optional[int] = None,
+        folder_to_save_attn_mat:Optional[str]=None
     ):
         incremental_states = torch.jit.annotate(
             List[Dict[str, Dict[str, Optional[Tensor]]]],
@@ -251,7 +252,8 @@ class SequenceGenerator(nn.Module):
         ), "min_len cannot be larger than max_len, please adjust these!"
         # compute the encoder output for each beam
         with torch.autograd.profiler.record_function("EnsembleModel: forward_encoder"):
-            encoder_outs = self.model.forward_encoder(net_input)
+           encoder_outs = self.model.forward_encoder(net_input, folder_to_save_attn_mat=folder_to_save_attn_mat) # itay
+           # encoder_outs = self.model.forward_encoder(net_input) # itay
 
         # placeholder of indices for bsz * beam_size to hold tokens and accumulative scores
         new_order = torch.arange(bsz).view(-1, 1).repeat(1, beam_size).view(-1)
@@ -755,10 +757,10 @@ class EnsembleModel(nn.Module):
         return min([m.max_decoder_positions() for m in self.models if hasattr(m, "max_decoder_positions")] + [sys.maxsize])
 
     @torch.jit.export
-    def forward_encoder(self, net_input: Dict[str, Tensor]):
+    def forward_encoder(self, net_input: Dict[str, Tensor], folder_to_save_attn_mat=None):# itay
         if not self.has_encoder():
             return None
-        return [model.encoder.forward_torchscript(net_input) for model in self.models]
+        return [model.encoder.forward_torchscript(net_input, folder_to_save_attn_mat=folder_to_save_attn_mat) for model in self.models]
 
     @torch.jit.export
     def forward_decoder(

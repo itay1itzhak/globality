@@ -4,8 +4,8 @@
 # LICENSE file in the root directory of this source tree.
 
 import torch
-from fairseq import utils
-from fairseq.modules import TransformerEncoderLayer
+from fairseq_org import utils
+from fairseq_org.modules import TransformerEncoderLayer
 
 from .multihead_linear_attention import MultiheadLinearAttention
 

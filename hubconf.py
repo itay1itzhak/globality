@@ -36,11 +36,11 @@ if len(missing_deps) > 0:
 
 
 # only do fairseq imports after checking for dependencies
-from fairseq.hub_utils import (  # noqa; noqa
+from fairseq_org.hub_utils import (  # noqa; noqa
     BPEHubInterface as bpe,
     TokenizerHubInterface as tokenizer,
 )
-from fairseq.models import MODEL_REGISTRY  # noqa
+from fairseq_org.models import MODEL_REGISTRY  # noqa
 
 
 # torch.hub doesn't build Cython components, so if they are not found then try

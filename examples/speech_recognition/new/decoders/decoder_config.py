@@ -7,8 +7,8 @@ import math
 from dataclasses import dataclass, field
 from typing import Optional
 
-from fairseq.dataclass.configs import FairseqDataclass
-from fairseq.dataclass.constants import ChoiceEnum
+from fairseq_org.dataclass.configs import FairseqDataclass
+from fairseq_org.dataclass.constants import ChoiceEnum
 from omegaconf import MISSING
 
 

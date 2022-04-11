@@ -8,9 +8,9 @@ import unittest
 from pathlib import Path
 from typing import Any, Dict, Sequence
 
-import fairseq.data.indexed_dataset as indexed_dataset
-import fairseq.options
-import fairseq.tasks.online_backtranslation as obt
+import fairseq_org.data.indexed_dataset as indexed_dataset
+import fairseq_org.options
+import fairseq_org.tasks.online_backtranslation as obt
 import torch
 from tests import utils
 
@@ -81,7 +81,7 @@ class OnlineBacktranslationTest(unittest.TestCase):
             "encoder_layerdrop": 0,
         }
 
-        args = fairseq.options.get_args(
+        args = fairseq_org.options.get_args(
             data,
             task="online_backtranslation",
             mono_langs=",".join(languages),

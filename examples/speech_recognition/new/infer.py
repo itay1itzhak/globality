@@ -22,9 +22,9 @@ from examples.speech_recognition.new.decoders.decoder_config import (
     FlashlightDecoderConfig,
 )
 from examples.speech_recognition.new.decoders.decoder import Decoder
-from fairseq import checkpoint_utils, distributed_utils, progress_bar, tasks, utils
-from fairseq.data.data_utils import post_process
-from fairseq.dataclass.configs import (
+from fairseq_org import checkpoint_utils, distributed_utils, progress_bar, tasks, utils
+from fairseq_org.data.data_utils import post_process
+from fairseq_org.dataclass.configs import (
     CheckpointConfig,
     CommonConfig,
     CommonEvalConfig,
@@ -32,9 +32,9 @@ from fairseq.dataclass.configs import (
     DistributedTrainingConfig,
     FairseqDataclass,
 )
-from fairseq.logging.meters import StopwatchMeter, TimeMeter
-from fairseq.logging.progress_bar import BaseProgressBar
-from fairseq.models.fairseq_model import FairseqModel
+from fairseq_org.logging.meters import StopwatchMeter, TimeMeter
+from fairseq_org.logging.progress_bar import BaseProgressBar
+from fairseq_org.models.fairseq_model import FairseqModel
 from omegaconf import OmegaConf
 
 import hydra

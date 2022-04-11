@@ -31,7 +31,7 @@ class TestFileIO(unittest.TestCase):
             shutil.rmtree(cls._tmpdir)  # type: ignore
 
     def test_file_io(self):
-        from fairseq.file_io import PathManager
+        from fairseq_org.file_io import PathManager
 
         with PathManager.open(os.path.join(self._tmpdir, "test.txt"), "r") as f:
             s = f.read()
@@ -40,7 +40,7 @@ class TestFileIO(unittest.TestCase):
     def test_file_io_oss(self):
         # Mock iopath to simulate oss environment.
         sys.modules["iopath"] = MagicMock()
-        from fairseq.file_io import PathManager
+        from fairseq_org.file_io import PathManager
 
         with PathManager.open(os.path.join(self._tmpdir, "test.txt"), "r") as f:
             s = f.read()
@@ -49,7 +49,7 @@ class TestFileIO(unittest.TestCase):
     def test_file_io_async(self):
         # ioPath `PathManager` is initialized after the first `opena` call.
         try:
-            from fairseq.file_io import IOPathManager, PathManager
+            from fairseq_org.file_io import IOPathManager, PathManager
             _asyncfile = os.path.join(self._tmpdir, "async.txt")
             f = PathManager.opena(_asyncfile, "wb")
             f.close()

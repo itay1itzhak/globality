@@ -3,9 +3,9 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from fairseq.models import register_model, register_model_architecture
-from fairseq.models.multilingual_transformer import MultilingualTransformerModel
-from fairseq.models.transformer import (
+from fairseq_org.models import register_model, register_model_architecture
+from fairseq_org.models.multilingual_transformer import MultilingualTransformerModel
+from fairseq_org.models.transformer import (
     TransformerDecoder,
     TransformerEncoder,
     base_architecture,

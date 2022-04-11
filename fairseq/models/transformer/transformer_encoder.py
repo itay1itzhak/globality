@@ -22,15 +22,13 @@ from fairseq.modules import transformer_layer
 from fairseq.modules.checkpoint_activations import checkpoint_wrapper
 from fairseq.modules.quant_noise import quant_noise as apply_quant_noise_
 from torch import Tensor
-from fairseq.models.transformer import (
-    TransformerConfig,
-)
+from fairseq.models.transformer import TransformerConfig
 
 
 # rewrite name for backward compatibility in `make_generation_fast_`
 def module_name_fordropout(module_name: str) -> str:
-    if module_name == 'TransformerEncoderBase':
-        return 'TransformerEncoder'
+    if module_name == "TransformerEncoderBase":
+        return "TransformerEncoder"
     else:
         return module_name
 
@@ -61,6 +59,13 @@ class TransformerEncoderBase(FairseqEncoder):
         self.max_source_positions = cfg.max_source_positions
 
         self.embed_tokens = embed_tokens
+
+        # itay
+        # from fairseq import checkpoint_utils
+        # attn_weights_checkpoint_file_name = "/checkpoint/itayitzhak/trained_models/opus/all/remove_eos_not_permuted_seed_1/checkpoint_best.pt"
+        # self.pretrained_all_model = checkpoint_utils.load_checkpoint_to_cpu(
+        #     attn_weights_checkpoint_file_name, load_on_all_ranks=True
+        # )
 
         self.embed_scale = 1.0 if cfg.no_scale_embedding else math.sqrt(embed_dim)
 
@@ -136,6 +141,7 @@ class TransformerEncoderBase(FairseqEncoder):
         src_lengths: Optional[torch.Tensor] = None,
         return_all_hiddens: bool = False,
         token_embeddings: Optional[torch.Tensor] = None,
+        folder_to_save_attn_mat: Optional[str] = None,
     ):
         """
         Args:
@@ -161,7 +167,11 @@ class TransformerEncoderBase(FairseqEncoder):
                   Only populated if *return_all_hiddens* is True.
         """
         return self.forward_scriptable(
-            src_tokens, src_lengths, return_all_hiddens, token_embeddings
+            src_tokens,
+            src_lengths,
+            return_all_hiddens,
+            token_embeddings,
+            folder_to_save_attn_mat=folder_to_save_attn_mat,
         )
 
     # TorchScript doesn't support super() method so that the scriptable Subclass
@@ -174,6 +184,7 @@ class TransformerEncoderBase(FairseqEncoder):
         src_lengths: Optional[torch.Tensor] = None,
         return_all_hiddens: bool = False,
         token_embeddings: Optional[torch.Tensor] = None,
+        folder_to_save_attn_mat: Optional[str] = None,
     ):
         """
         Args:
@@ -217,9 +228,25 @@ class TransformerEncoderBase(FairseqEncoder):
             encoder_states.append(x)
 
         # encoder layers
-        for layer in self.layers:
+        emb_raw = []  # itay
+        _, and_index = (src_tokens == self.dictionary.indices[","]).nonzero(
+            as_tuple=True
+        )  # itay
+
+        for layer_num, layer in enumerate(self.layers):
+            dropout_attn_mask = None
+            # mod_name = str(self.cfg.save_dir).split('/')[-2]
+            # path_to_save_attn_mat = '/checkpoint/itayitzhak/attn_weigths/' + mod_name + '_' + '_'.join(self.cfg.data.split('/')[-6:])
+            emb_raw.append(x.squeeze(1))
+
             x = layer(
-                x, encoder_padding_mask=encoder_padding_mask if has_pads else None
+                x,
+                encoder_padding_mask=encoder_padding_mask if has_pads else None,
+                dropout_attn_mask=dropout_attn_mask,
+                folder_to_save_attn_mat=folder_to_save_attn_mat,
+                src_tokens=src_tokens,
+                and_index=and_index,
+                layer_num=layer_num,
             )
             if return_all_hiddens:
                 assert encoder_states is not None
@@ -228,11 +255,47 @@ class TransformerEncoderBase(FairseqEncoder):
         if self.layer_norm is not None:
             x = self.layer_norm(x)
 
+        is_save_emb_norms = False
+        # embeddings norms saving
+        if is_save_emb_norms:
+            # mod_name = str(self.cfg.save_dir).split('/')[-1]
+            # path_to_save_emb_norm = '/checkpoint/itayitzhak/emb_norms/' + mod_name + '_' + '_'.join(self.cfg.data.split('/')[-6:])
+            path_to_save_emb_raw = folder_to_save_attn_mat.replace(
+                "attn_weigths", "emb_raw"
+            )
+            # emb_norms = torch.stack(emb_norms)
+            # emb_cosine = torch.stack(emb_cosine)
+            emb_raw = torch.stack(emb_raw)
+
+            # get sample number to save from count_2.txt and save emb_norms
+            with open(f"{path_to_save_emb_raw}/count.txt", "r") as f:
+                # folder_to_save = f.readline().strip()
+                line = f.readline()
+                while len(line) != 0:
+                    last_i = int(line)
+                    line = f.readline()
+                # print(f"Saving now: {path_to_save_emb_norm}/sample_emb_norms_{last_i}.pt")
+                # torch.save(emb_norms, f'{path_to_save_emb_norm}/sample_emb_norms_{last_i}.pt')
+                # print(f"Saving now: {path_to_save_emb_norm}/sample_emb_cosine_{last_i}.pt")
+                # torch.save(emb_cosine, f'{path_to_save_emb_norm}/sample_emb_cosine_{last_i}.pt')
+                print(f"Saving now: {path_to_save_emb_raw}/sample_emb_raw_{last_i}.pt")
+                torch.save(
+                    emb_raw, f"{path_to_save_emb_raw}/sample_emb_raw_{last_i}.pt"
+                )
+
+            with open(f"{path_to_save_emb_raw}/count.txt", "a") as f:
+                f.write(str(last_i + 1) + "\n")
+
         # The Pytorch Mobile lite interpreter does not supports returning NamedTuple in
         # `forward` so we use a dictionary instead.
         # TorchScript does not support mixed values so the values are all lists.
         # The empty list is equivalent to None.
-        src_lengths = src_tokens.ne(self.padding_idx).sum(dim=1, dtype=torch.int32).reshape(-1, 1).contiguous()
+        src_lengths = (
+            src_tokens.ne(self.padding_idx)
+            .sum(dim=1, dtype=torch.int32)
+            .reshape(-1, 1)
+            .contiguous()
+        )
         return {
             "encoder_out": [x],  # T x B x C
             "encoder_padding_mask": [encoder_padding_mask],  # B x T
@@ -330,12 +393,9 @@ class TransformerEncoder(TransformerEncoderBase):
     def __init__(self, args, dictionary, embed_tokens):
         self.args = args
         super().__init__(
-            TransformerConfig.from_namespace(args),
-            dictionary,
-            embed_tokens,
+            TransformerConfig.from_namespace(args), dictionary, embed_tokens,
         )
 
     def build_encoder_layer(self, args):
-        return super().build_encoder_layer(
-            TransformerConfig.from_namespace(args),
-        )
+        return super().build_encoder_layer(TransformerConfig.from_namespace(args),)
+

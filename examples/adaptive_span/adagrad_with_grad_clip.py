@@ -5,7 +5,7 @@
 
 from torch.optim import Adagrad
 
-from fairseq.optim import LegacyFairseqOptimizer, register_optimizer
+from fairseq_org.optim import LegacyFairseqOptimizer, register_optimizer
 
 
 @register_optimizer("adagrad_with_grad_clip")

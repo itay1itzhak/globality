@@ -15,7 +15,7 @@ import warnings
 
 
 from dataclasses import dataclass
-from fairseq.dataclass import FairseqDataclass
+from fairseq_org.dataclass import FairseqDataclass
 from .kaldi_initializer import KaldiInitializerConfig, initalize_kaldi
 
 

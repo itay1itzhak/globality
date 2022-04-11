@@ -19,7 +19,7 @@ from examples.simultaneous_translation.utils.monotonic_attention import (
     expected_soft_attention,
     mass_preservation,
 )
-from fairseq.modules import MultiheadAttention
+from fairseq_org.modules import MultiheadAttention
 
 from . import register_monotonic_attention
 from typing import Dict, Optional

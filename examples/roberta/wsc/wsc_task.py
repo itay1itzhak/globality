@@ -10,8 +10,8 @@ import tempfile
 import numpy as np
 import torch
 import torch.nn.functional as F
-from fairseq import utils
-from fairseq.data import (
+from fairseq_org import utils
+from fairseq_org.data import (
     Dictionary,
     IdDataset,
     ListDataset,
@@ -23,7 +23,7 @@ from fairseq.data import (
     data_utils,
     encoders,
 )
-from fairseq.tasks import LegacyFairseqTask, register_task
+from fairseq_org.tasks import LegacyFairseqTask, register_task
 
 from . import wsc_utils
 

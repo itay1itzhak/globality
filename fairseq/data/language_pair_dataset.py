@@ -324,6 +324,26 @@ class LanguagePairDataset(FairseqDataset):
             if self.src[index][-1] == eos:
                 src_item = self.src[index][:-1]
 
+        append_double_eos_to_src = False # itay
+        if append_double_eos_to_src:
+            # print("\nappend_double_eos_to_src\n")
+            eos = self.src_dict.eos()
+            if self.src[index][-1] == eos and self.src[index][-2] != eos:
+                src_item = torch.cat([self.src[index], torch.LongTensor([eos])])
+        
+        append_bos_eos_to_src = False # itay
+        if append_bos_eos_to_src:
+            # print("\nappend_bos_eos_to_src\n")
+            bos = self.src_dict.bos()
+            eos = self.src_dict.eos()
+            if self.src[index][-1] == eos and self.src[index][-2] != eos:
+                src_item = torch.cat([self.src[index], torch.LongTensor([bos])])
+                src_item = torch.cat([src_item, torch.LongTensor([eos])])
+
+        # itay
+        # print(f"self.remove_eos_from_source:{self.remove_eos_from_source}")
+        # print(f"self.append_bos:{self.append_bos}")
+
         example = {
             "id": index,
             "source": src_item,

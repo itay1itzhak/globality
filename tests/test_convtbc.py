@@ -7,7 +7,7 @@ import unittest
 
 import torch
 import torch.nn as nn
-from fairseq.modules import ConvTBC
+from fairseq_org.modules import ConvTBC
 
 
 class TestConvTBC(unittest.TestCase):

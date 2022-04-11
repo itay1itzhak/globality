@@ -10,7 +10,7 @@ from io import StringIO
 from unittest.mock import MagicMock, patch
 
 import torch
-from fairseq import checkpoint_utils, data
+from fairseq_org import checkpoint_utils, data
 from omegaconf import OmegaConf
 
 

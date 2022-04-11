@@ -10,8 +10,8 @@ import os
 import logging
 from argparse import ArgumentError
 
-from fairseq import options, models
-from fairseq.data import (
+from fairseq_org import options, models
+from fairseq_org.data import (
     data_utils,
     Dictionary,
     LanguagePairDataset,
@@ -24,7 +24,7 @@ from .multitask_data_utils import (
 )
 
 
-from fairseq.tasks import LegacyFairseqTask, register_task
+from fairseq_org.tasks import LegacyFairseqTask, register_task
 
 logger = logging.getLogger(__name__)
 

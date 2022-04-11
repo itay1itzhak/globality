@@ -5,7 +5,7 @@
 
 import unittest
 
-from fairseq.data import iterators
+from fairseq_org.data import iterators
 
 
 class TestIterators(unittest.TestCase):

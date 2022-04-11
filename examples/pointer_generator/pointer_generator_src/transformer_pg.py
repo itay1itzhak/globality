@@ -8,9 +8,9 @@ from typing import Any, Dict, Optional, List, Tuple
 
 import torch
 import torch.nn as nn
-from fairseq import utils
-from fairseq.models import register_model, register_model_architecture
-from fairseq.models.transformer import (
+from fairseq_org import utils
+from fairseq_org.models import register_model, register_model_architecture
+from fairseq_org.models.transformer import (
     DEFAULT_MAX_SOURCE_POSITIONS,
     DEFAULT_MAX_TARGET_POSITIONS,
     TransformerDecoder,

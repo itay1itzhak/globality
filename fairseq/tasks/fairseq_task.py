@@ -510,12 +510,12 @@ class FairseqTask(object):
     ) -> torch.utils.data.Dataset:
         raise NotImplementedError
 
-    def inference_step(
-        self, generator, models, sample, prefix_tokens=None, constraints=None
+    def inference_step( 
+        self, generator, models, sample, prefix_tokens=None, constraints=None, folder_to_save_attn_mat=None # itay
     ):
         with torch.no_grad():
             return generator.generate(
-                models, sample, prefix_tokens=prefix_tokens, constraints=constraints
+                models, sample, prefix_tokens=prefix_tokens, constraints=constraints, folder_to_save_attn_mat=folder_to_save_attn_mat
             )
 
     def begin_epoch(self, epoch, model):

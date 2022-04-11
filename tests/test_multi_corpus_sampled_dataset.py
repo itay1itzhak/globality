@@ -8,8 +8,8 @@ from collections import OrderedDict
 
 import numpy as np
 import torch
-from fairseq.data import LanguagePairDataset, TokenBlockDataset
-from fairseq.data.multi_corpus_sampled_dataset import MultiCorpusSampledDataset
+from fairseq_org.data import LanguagePairDataset, TokenBlockDataset
+from fairseq_org.data.multi_corpus_sampled_dataset import MultiCorpusSampledDataset
 from tests.test_train import mock_dict
 
 

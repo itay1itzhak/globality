@@ -7,7 +7,7 @@ import logging
 import os
 import sys
 
-import fairseq
+import fairseq_org
 import soundfile as sf
 import torch
 import torch.nn.functional as F
@@ -30,7 +30,7 @@ class HubertFeatureReader(object):
             model,
             cfg,
             task,
-        ) = fairseq.checkpoint_utils.load_model_ensemble_and_task([ckpt_path])
+        ) = fairseq_org.checkpoint_utils.load_model_ensemble_and_task([ckpt_path])
         self.model = model[0].eval().cuda()
         self.task = task
         self.layer = layer

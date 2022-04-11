@@ -11,19 +11,19 @@ from torch import Tensor
 import torch
 import torch.nn as nn
 
-from fairseq.models import (
+from fairseq_org.models import (
     FairseqEncoderDecoderModel,
     register_model,
     register_model_architecture,
 )
-from fairseq.models.transformer import (
+from fairseq_org.models.transformer import (
     base_architecture,
     Embedding,
     TransformerModel,
     TransformerEncoder,
     TransformerDecoder,
 )
-from fairseq.modules import (
+from fairseq_org.modules import (
     TransformerDecoderLayer,
 )
 

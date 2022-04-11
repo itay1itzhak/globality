@@ -7,7 +7,7 @@ import unittest
 
 import torch
 import torch.nn as nn
-from fairseq.modules.checkpoint_activations import checkpoint_wrapper
+from fairseq_org.modules.checkpoint_activations import checkpoint_wrapper
 from torch.utils.checkpoint import checkpoint
 
 

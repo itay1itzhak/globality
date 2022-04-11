@@ -11,11 +11,11 @@ from examples.simultaneous_translation.modules.monotonic_transformer_layer impor
     TransformerMonotonicDecoderLayer,
     TransformerMonotonicEncoderLayer,
 )
-from fairseq.models import (
+from fairseq_org.models import (
     register_model,
     register_model_architecture,
 )
-from fairseq.models.transformer import (
+from fairseq_org.models.transformer import (
     TransformerModel,
     TransformerEncoder,
     TransformerDecoder,

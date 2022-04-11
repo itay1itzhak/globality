@@ -8,7 +8,7 @@ import unittest
 
 import tests.utils as test_utils
 import torch
-from fairseq.sequence_scorer import SequenceScorer
+from fairseq_org.sequence_scorer import SequenceScorer
 
 
 class TestSequenceScorer(unittest.TestCase):

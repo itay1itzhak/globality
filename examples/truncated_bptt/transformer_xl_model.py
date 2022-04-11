@@ -8,13 +8,13 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
 import torch
-from fairseq.dataclass import FairseqDataclass
-from fairseq.models import (
+from fairseq_org.dataclass import FairseqDataclass
+from fairseq_org.models import (
     FairseqIncrementalDecoder,
     FairseqLanguageModel,
     register_model,
 )
-from fairseq.modules.checkpoint_activations import checkpoint_wrapper
+from fairseq_org.modules.checkpoint_activations import checkpoint_wrapper
 from omegaconf import II
 
 

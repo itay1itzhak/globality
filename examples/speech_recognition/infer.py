@@ -17,9 +17,9 @@ import sys
 import editdistance
 import numpy as np
 import torch
-from fairseq import checkpoint_utils, options, progress_bar, tasks, utils
-from fairseq.data.data_utils import post_process
-from fairseq.logging.meters import StopwatchMeter, TimeMeter
+from fairseq_org import checkpoint_utils, options, progress_bar, tasks, utils
+from fairseq_org.data.data_utils import post_process
+from fairseq_org.logging.meters import StopwatchMeter, TimeMeter
 
 
 logging.basicConfig()

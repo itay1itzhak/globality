@@ -12,12 +12,12 @@ from multiprocessing import cpu_count
 from typing import List, Optional
 
 import sentencepiece as sp
-from fairseq.data.encoders.byte_bpe import ByteBPE
-from fairseq.data.encoders.byte_utils import byte_encode
-from fairseq.data.encoders.bytes import Bytes
-from fairseq.data.encoders.characters import Characters
-from fairseq.data.encoders.moses_tokenizer import MosesTokenizer
-from fairseq.data.encoders.sentencepiece_bpe import SentencepieceBPE
+from fairseq_org.data.encoders.byte_bpe import ByteBPE
+from fairseq_org.data.encoders.byte_utils import byte_encode
+from fairseq_org.data.encoders.bytes import Bytes
+from fairseq_org.data.encoders.characters import Characters
+from fairseq_org.data.encoders.moses_tokenizer import MosesTokenizer
+from fairseq_org.data.encoders.sentencepiece_bpe import SentencepieceBPE
 
 
 SPLITS = ["train", "valid", "test"]

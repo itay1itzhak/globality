@@ -12,8 +12,8 @@ import os
 import numpy as np
 import torch
 
-from fairseq import metrics
-from fairseq.data import (
+from fairseq_org import metrics
+from fairseq_org.data import (
     ConcatDataset,
     ConcatSentencesDataset,
     data_utils,
@@ -30,8 +30,8 @@ from fairseq.data import (
     TruncateDataset,
     TokenBlockDataset,
 )
-from fairseq.dataclass import ChoiceEnum, FairseqDataclass
-from fairseq.tasks import FairseqTask, register_task
+from fairseq_org.dataclass import ChoiceEnum, FairseqDataclass
+from fairseq_org.tasks import FairseqTask, register_task
 from omegaconf import II, MISSING
 
 

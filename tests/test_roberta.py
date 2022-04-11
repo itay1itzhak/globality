@@ -7,17 +7,17 @@ import functools
 import unittest
 from typing import Any, Dict, Sequence
 
-import fairseq
-import fairseq.options
-import fairseq.tasks
+import fairseq_org
+import fairseq_org.options
+import fairseq_org.tasks
 import torch
 from tests.utils import dummy_dictionary
 
 VOCAB_SIZE = 100
 
 
-@fairseq.tasks.register_task("fake_task")
-class FakeTask(fairseq.tasks.LegacyFairseqTask):
+@fairseq_org.tasks.register_task("fake_task")
+class FakeTask(fairseq_org.tasks.LegacyFairseqTask):
     def __init__(self, args):
         super().__init__(args)
         self.dictionary = dummy_dictionary(VOCAB_SIZE - 4)
@@ -61,7 +61,7 @@ def get_toy_model(
     }
     kwargs.update(extra_args)
     fake_task = FakeTask(kwargs)
-    args = fairseq.options.get_args(
+    args = fairseq_org.options.get_args(
         task="online_backtranslation",
         mono_langs="en,ro",
         valid_lang_pairs="en-ro",

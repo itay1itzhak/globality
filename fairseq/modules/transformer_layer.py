@@ -12,9 +12,7 @@ from fairseq.modules import LayerNorm, MultiheadAttention
 from fairseq.modules.fairseq_dropout import FairseqDropout
 from fairseq.modules.quant_noise import quant_noise
 from torch import Tensor
-from fairseq.models.transformer import (
-    TransformerConfig,
-)
+from fairseq.models.transformer import TransformerConfig
 
 
 class TransformerEncoderLayerBase(nn.Module):
@@ -109,6 +107,11 @@ class TransformerEncoderLayerBase(nn.Module):
         x,
         encoder_padding_mask: Optional[Tensor],
         attn_mask: Optional[Tensor] = None,
+        folder_to_save_attn_mat: Optional[str] = None,  # itay
+        src_tokens: Optional[Tensor] = None,  # itay
+        dropout_attn_mask: Optional[Tensor] = None,
+        and_index: Optional[Tensor] = None,  # itay
+        layer_num: Optional[int] = None,  # itay
     ):
         """
         Args:
@@ -136,14 +139,36 @@ class TransformerEncoderLayerBase(nn.Module):
         residual = x
         if self.normalize_before:
             x = self.self_attn_layer_norm(x)
-        x, _ = self.self_attn(
-            query=x,
-            key=x,
-            value=x,
-            key_padding_mask=encoder_padding_mask,
-            need_weights=False,
-            attn_mask=attn_mask,
-        )
+
+        # and_index, _ = (src_tokens == self.dictionary.indices['and']).nonzero(as_tuple=True)
+        freeze_attn = False  # itay
+        if freeze_attn:
+            with torch.no_grad():  # itay, freeze attention layer
+                x, _ = self.self_attn(
+                    query=x,
+                    key=x,
+                    value=x,
+                    key_padding_mask=encoder_padding_mask,
+                    need_weights=False,
+                    attn_mask=attn_mask,
+                    folder_to_save_attn_mat=folder_to_save_attn_mat,  # itay
+                    dropout_attn_mask=dropout_attn_mask,  # itay
+                    and_index=and_index,  # itay
+                    layer_num=layer_num,  # itay
+                )
+        else:
+            x, _ = self.self_attn(
+                query=x,
+                key=x,
+                value=x,
+                key_padding_mask=encoder_padding_mask,
+                need_weights=False,
+                attn_mask=attn_mask,
+                folder_to_save_attn_mat=folder_to_save_attn_mat,  # itay
+                dropout_attn_mask=dropout_attn_mask,  # itay
+                and_index=and_index,  # itay
+                layer_num=layer_num,  # itay
+            )
         x = self.dropout_module(x)
         x = self.residual_connection(x, residual)
         if not self.normalize_before:
@@ -205,10 +230,7 @@ class TransformerDecoderLayerBase(nn.Module):
         self.cross_self_attention = cfg.cross_self_attention
 
         self.self_attn = self.build_self_attention(
-            self.embed_dim,
-            cfg,
-            add_bias_kv=add_bias_kv,
-            add_zero_attn=add_zero_attn,
+            self.embed_dim, cfg, add_bias_kv=add_bias_kv, add_zero_attn=add_zero_attn,
         )
 
         self.activation_fn = utils.get_activation_fn(activation=cfg.activation_fn)
@@ -451,6 +473,6 @@ class TransformerDecoderLayer(TransformerDecoderLayerBase):
 
     def build_encoder_attention(self, embed_dim, args):
         return super().build_encoder_attention(
-            embed_dim,
-            TransformerConfig.from_namespace(args),
+            embed_dim, TransformerConfig.from_namespace(args),
         )
+

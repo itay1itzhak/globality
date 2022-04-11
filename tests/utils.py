@@ -12,19 +12,19 @@ from io import StringIO
 
 import torch
 import torch.nn.functional as F
-from fairseq import options, utils
-from fairseq.data import Dictionary
-from fairseq.data.language_pair_dataset import collate
-from fairseq.models import (
+from fairseq_org import options, utils
+from fairseq_org.data import Dictionary
+from fairseq_org.data.language_pair_dataset import collate
+from fairseq_org.models import (
     FairseqEncoder,
     FairseqEncoderDecoderModel,
     FairseqIncrementalDecoder,
 )
-from fairseq.models.fairseq_encoder import EncoderOut
-from fairseq.tasks import LegacyFairseqTask
+from fairseq_org.models.fairseq_encoder import EncoderOut
+from fairseq_org.tasks import LegacyFairseqTask
 from fairseq_cli import generate, interactive, preprocess, train, validate
-import fairseq.distributed.utils as distributed_utils
-from fairseq.dataclass.utils import convert_namespace_to_omegaconf
+import fairseq_org.distributed.utils as distributed_utils
+from fairseq_org.dataclass.utils import convert_namespace_to_omegaconf
 
 
 def dummy_dictionary(vocab_size, prefix="token_"):

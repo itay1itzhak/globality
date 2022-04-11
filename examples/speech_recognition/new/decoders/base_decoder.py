@@ -7,8 +7,8 @@ import itertools as it
 from typing import Any, Dict, List
 
 import torch
-from fairseq.data.dictionary import Dictionary
-from fairseq.models.fairseq_model import FairseqModel
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.models.fairseq_model import FairseqModel
 
 
 class BaseDecoder:

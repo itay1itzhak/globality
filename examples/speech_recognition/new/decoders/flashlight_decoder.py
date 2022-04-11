@@ -13,11 +13,11 @@ from typing import Any, Dict, Tuple
 
 import numpy as np
 import torch
-from fairseq import tasks
-from fairseq.data.dictionary import Dictionary
-from fairseq.dataclass.utils import convert_namespace_to_omegaconf
-from fairseq.models.fairseq_model import FairseqModel
-from fairseq.utils import apply_to_sample
+from fairseq_org import tasks
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.dataclass.utils import convert_namespace_to_omegaconf
+from fairseq_org.models.fairseq_model import FairseqModel
+from fairseq_org.utils import apply_to_sample
 from omegaconf import open_dict, OmegaConf
 
 from typing import List

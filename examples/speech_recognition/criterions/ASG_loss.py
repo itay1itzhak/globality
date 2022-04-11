@@ -7,8 +7,8 @@
 
 import torch
 from examples.speech_recognition.data.replabels import pack_replabels
-from fairseq import utils
-from fairseq.criterions import FairseqCriterion, register_criterion
+from fairseq_org import utils
+from fairseq_org.criterions import FairseqCriterion, register_criterion
 
 
 @register_criterion("asg_loss")

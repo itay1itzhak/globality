@@ -14,7 +14,7 @@ from shutil import copyfile
 
 from npy_append_array import NpyAppendArray
 
-import fairseq
+import fairseq_org
 import soundfile as sf
 
 
@@ -35,7 +35,7 @@ def get_parser():
 
 class Wav2VecFeatureReader(object):
     def __init__(self, cp_file, layer):
-        model, cfg, task = fairseq.checkpoint_utils.load_model_ensemble_and_task(
+        model, cfg, task = fairseq_org.checkpoint_utils.load_model_ensemble_and_task(
             [cp_file]
         )
         model = model[0]

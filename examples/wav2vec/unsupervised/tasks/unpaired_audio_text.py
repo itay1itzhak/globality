@@ -12,17 +12,17 @@ import os
 from typing import Optional
 import torch
 
-from fairseq.logging import metrics
-from fairseq.tasks import FairseqTask, register_task
+from fairseq_org.logging import metrics
+from fairseq_org.tasks import FairseqTask, register_task
 from ..data import ExtractedFeaturesDataset, RandomInputDataset
 
-from fairseq.data import (
+from fairseq_org.data import (
     Dictionary,
     data_utils,
     StripTokenDataset,
 )
-from fairseq.dataclass import FairseqDataclass
-from fairseq.distributed.utils import get_data_parallel_world_size
+from fairseq_org.dataclass import FairseqDataclass
+from fairseq_org.distributed.utils import get_data_parallel_world_size
 from omegaconf import MISSING
 
 from examples.speech_recognition.kaldi.kaldi_decoder import (

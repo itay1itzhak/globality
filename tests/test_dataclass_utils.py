@@ -7,8 +7,8 @@ import unittest
 from argparse import ArgumentParser
 from dataclasses import dataclass, field
 
-from fairseq.dataclass import FairseqDataclass
-from fairseq.dataclass.utils import gen_parser_from_dataclass
+from fairseq_org.dataclass import FairseqDataclass
+from fairseq_org.dataclass.utils import gen_parser_from_dataclass
 
 
 @dataclass

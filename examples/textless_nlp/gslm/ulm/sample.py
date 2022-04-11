@@ -11,7 +11,7 @@ import os
 import ast
 import numpy as np
 
-from fairseq import checkpoint_utils, options, tasks, utils
+from fairseq_org import checkpoint_utils, options, tasks, utils
 
 import tqdm
 
@@ -48,7 +48,7 @@ def main(args):
     arg_sample_size = args.samples_per_prompt
 
     try:
-        from fairseq.dataclass.utils import convert_namespace_to_omegaconf
+        from fairseq_org.dataclass.utils import convert_namespace_to_omegaconf
         args = convert_namespace_to_omegaconf(args)
     except:
         pass

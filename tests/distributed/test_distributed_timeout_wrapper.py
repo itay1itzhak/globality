@@ -11,7 +11,7 @@ import unittest
 import torch
 from torch import nn
 
-from fairseq.distributed import DistributedTimeoutWrapper
+from fairseq_org.distributed import DistributedTimeoutWrapper
 
 
 class ModuleWithDelay(nn.Module):

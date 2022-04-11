@@ -6,7 +6,7 @@
 import unittest
 import uuid
 
-from fairseq import metrics
+from fairseq_org import metrics
 
 
 class TestMetrics(unittest.TestCase):

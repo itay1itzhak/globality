@@ -123,6 +123,10 @@ class MultiheadAttention(nn.Module):
         attn_mask: Optional[Tensor] = None,
         before_softmax: bool = False,
         need_head_weights: bool = False,
+        folder_to_save_attn_mat: Optional[str] = None,  # itay
+        dropout_attn_mask: Optional[Tensor] = None,  # itay
+        and_index: Optional[Tensor] = None,  # itay
+        layer_num: Optional[int] = None,  # itay
     ) -> Tuple[Tensor, Optional[Tensor]]:
         """Input shape: Time x Batch x Channel
 
@@ -189,6 +193,10 @@ class MultiheadAttention(nn.Module):
                 q_proj_weight=self.q_proj.weight,
                 k_proj_weight=self.k_proj.weight,
                 v_proj_weight=self.v_proj.weight,
+                folder_to_save_attn_mat=folder_to_save_attn_mat,  # itay
+                dropout_attn_mask=dropout_attn_mask,  # itay
+                and_index=and_index,  # itay
+                layer_num=layer_num,  # itay
             )
 
         if incremental_state is not None:

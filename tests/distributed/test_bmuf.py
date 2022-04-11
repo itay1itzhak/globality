@@ -11,8 +11,8 @@ from multiprocessing import Manager
 
 import torch
 import torch.nn as nn
-from fairseq import optim
-from fairseq.distributed import utils as distributed_utils
+from fairseq_org import optim
+from fairseq_org.distributed import utils as distributed_utils
 from omegaconf import OmegaConf
 
 

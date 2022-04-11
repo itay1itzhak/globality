@@ -5,17 +5,17 @@
 # the root directory of this source tree. An additional grant of patent rights
 # can be found in the PATENTS file in the same directory.
 
-from fairseq import checkpoint_utils
-from fairseq.models import (
+from fairseq_org import checkpoint_utils
+from fairseq_org.models import (
     register_model,
     register_model_architecture,
 )
-from fairseq.models.speech_to_text import (
+from fairseq_org.models.speech_to_text import (
     ConvTransformerModel,
     convtransformer_espnet,
     ConvTransformerEncoder,
 )
-from fairseq.models.speech_to_text.modules.augmented_memory_attention import (
+from fairseq_org.models.speech_to_text.modules.augmented_memory_attention import (
     augmented_memory,
     SequenceEncoder,
     AugmentedMemoryConvTransformerEncoder,
@@ -23,7 +23,7 @@ from fairseq.models.speech_to_text.modules.augmented_memory_attention import (
 
 from torch import nn, Tensor
 from typing import Dict, List
-from fairseq.models.speech_to_text.modules.emformer import NoSegAugmentedMemoryTransformerEncoderLayer
+from fairseq_org.models.speech_to_text.modules.emformer import NoSegAugmentedMemoryTransformerEncoderLayer
 
 @register_model("convtransformer_simul_trans")
 class SimulConvTransformerModel(ConvTransformerModel):

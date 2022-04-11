@@ -8,9 +8,9 @@ from inspect import currentframe, getframeinfo
 import numpy as np
 import torch
 from examples.speech_recognition.data.data_utils import lengths_to_encoder_padding_mask
-from fairseq.data import data_utils as fairseq_data_utils
-from fairseq.data.dictionary import Dictionary
-from fairseq.models import (
+from fairseq_org.data import data_utils as fairseq_data_utils
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.models import (
     BaseFairseqModel,
     FairseqDecoder,
     FairseqEncoder,
@@ -18,7 +18,7 @@ from fairseq.models import (
     FairseqEncoderModel,
     FairseqModel,
 )
-from fairseq.tasks.fairseq_task import LegacyFairseqTask
+from fairseq_org.tasks.fairseq_task import LegacyFairseqTask
 
 
 DEFAULT_TEST_VOCAB_SIZE = 100

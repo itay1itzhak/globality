@@ -11,8 +11,8 @@ import sys
 import torch
 from examples.speech_recognition.data import AsrDataset
 from examples.speech_recognition.data.replabels import replabel_symbol
-from fairseq.data import Dictionary
-from fairseq.tasks import LegacyFairseqTask, register_task
+from fairseq_org.data import Dictionary
+from fairseq_org.tasks import LegacyFairseqTask, register_task
 
 
 def get_asr_dataset_from_json(data_json_path, tgt_dict):

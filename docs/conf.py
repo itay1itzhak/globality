@@ -19,7 +19,7 @@
 
 import os
 import sys
-from fairseq import __version__
+from fairseq_org import __version__
 
 
 # source code directory, relative to this file, for sphinx-autobuild

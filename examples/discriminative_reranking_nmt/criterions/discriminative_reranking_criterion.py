@@ -9,9 +9,9 @@ from dataclasses import dataclass, field
 import torch
 import torch.nn.functional as F
 
-from fairseq import metrics, utils
-from fairseq.criterions import FairseqCriterion, register_criterion
-from fairseq.dataclass import ChoiceEnum, FairseqDataclass
+from fairseq_org import metrics, utils
+from fairseq_org.criterions import FairseqCriterion, register_criterion
+from fairseq_org.dataclass import ChoiceEnum, FairseqDataclass
 
 
 _EPSILON = torch.finfo(torch.float32).eps

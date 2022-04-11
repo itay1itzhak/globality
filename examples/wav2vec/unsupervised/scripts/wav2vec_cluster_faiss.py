@@ -17,7 +17,7 @@ from collections import namedtuple
 
 import faiss
 
-import fairseq
+import fairseq_org
 import soundfile as sf
 
 
@@ -73,17 +73,17 @@ def parse_faiss_specs(specs_str):
 
 class Wav2VecFeatureReader(object):
     def __init__(self, cp_file, layer):
-        state = fairseq.checkpoint_utils.load_checkpoint_to_cpu(cp_file)
+        state = fairseq_org.checkpoint_utils.load_checkpoint_to_cpu(cp_file)
 
         self.layer = layer
 
         if "cfg" in state:
             w2v_args = state["cfg"]
-            task = fairseq.tasks.setup_task(w2v_args.task)
+            task = fairseq_org.tasks.setup_task(w2v_args.task)
             model = task.build_model(w2v_args.model)
         else:
             w2v_args = state["args"]
-            task = fairseq.tasks.setup_task(w2v_args)
+            task = fairseq_org.tasks.setup_task(w2v_args)
             model = task.build_model(w2v_args)
         model.load_state_dict(state["model"], strict=True)
         model.eval()

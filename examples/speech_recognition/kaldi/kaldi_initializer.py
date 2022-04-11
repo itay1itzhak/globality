@@ -16,8 +16,8 @@ from pathlib import Path
 import subprocess
 from typing import Optional
 
-from fairseq.data.dictionary import Dictionary
-from fairseq.dataclass import FairseqDataclass
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.dataclass import FairseqDataclass
 
 script_dir = Path(__file__).resolve().parent
 config_path = script_dir / "config"

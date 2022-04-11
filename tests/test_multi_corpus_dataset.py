@@ -7,8 +7,8 @@ import unittest
 from collections import OrderedDict
 
 import torch
-from fairseq.data import LanguagePairDataset, TokenBlockDataset
-from fairseq.data.multi_corpus_dataset import MultiCorpusDataset
+from fairseq_org.data import LanguagePairDataset, TokenBlockDataset
+from fairseq_org.data.multi_corpus_dataset import MultiCorpusDataset
 from tests.test_train import mock_dict
 
 

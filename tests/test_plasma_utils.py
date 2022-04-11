@@ -9,7 +9,7 @@ from tests.utils import create_dummy_data, preprocess_lm_data, train_language_mo
 
 try:
     from pyarrow import plasma
-    from fairseq.data.plasma_utils import PlasmaView, PlasmaStore
+    from fairseq_org.data.plasma_utils import PlasmaView, PlasmaStore
 
     PYARROW_AVAILABLE = True
 except ImportError:

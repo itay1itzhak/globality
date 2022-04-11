@@ -10,8 +10,8 @@ from collections.abc import Iterable
 import torch
 import torch.nn as nn
 from examples.speech_recognition.data.data_utils import lengths_to_encoder_padding_mask
-from fairseq import utils
-from fairseq.models import (
+from fairseq_org import utils
+from fairseq_org.models import (
     FairseqEncoder,
     FairseqEncoderDecoderModel,
     FairseqEncoderModel,
@@ -19,7 +19,7 @@ from fairseq.models import (
     register_model,
     register_model_architecture,
 )
-from fairseq.modules import (
+from fairseq_org.modules import (
     LinearizedConvolution,
     TransformerDecoderLayer,
     TransformerEncoderLayer,

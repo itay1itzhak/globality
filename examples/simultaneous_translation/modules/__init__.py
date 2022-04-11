@@ -6,7 +6,7 @@
 
 import os
 import importlib
-from fairseq import registry
+from fairseq_org import registry
 
 (
     build_monotonic_attention,

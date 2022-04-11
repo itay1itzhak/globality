@@ -6,7 +6,7 @@
 import unittest
 
 import torch
-from fairseq.modules.sparse_multihead_attention import SparseMultiheadAttention
+from fairseq_org.modules.sparse_multihead_attention import SparseMultiheadAttention
 
 
 class TestSparseMultiheadAttention(unittest.TestCase):

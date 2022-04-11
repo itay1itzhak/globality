@@ -7,7 +7,7 @@
 
 from typing import Union
 
-from fairseq.data.dictionary import Dictionary
+from fairseq_org.data.dictionary import Dictionary
 
 from .decoder_config import DecoderConfig, FlashlightDecoderConfig
 from .base_decoder import BaseDecoder

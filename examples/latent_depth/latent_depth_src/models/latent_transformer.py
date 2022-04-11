@@ -6,9 +6,9 @@
 from typing import Any, Dict, Optional
 
 import torch.nn as nn
-from fairseq.models.fairseq_encoder import EncoderOut
-from fairseq.models.transformer import TransformerDecoder, TransformerEncoder
-from fairseq.modules import TransformerDecoderLayer, TransformerEncoderLayer
+from fairseq_org.models.fairseq_encoder import EncoderOut
+from fairseq_org.models.transformer import TransformerDecoder, TransformerEncoder
+from fairseq_org.modules import TransformerDecoderLayer, TransformerEncoderLayer
 from torch import Tensor
 
 from ..modules.latent_layers import LayerSelect

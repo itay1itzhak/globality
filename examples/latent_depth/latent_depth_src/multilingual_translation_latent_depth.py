@@ -3,8 +3,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from fairseq.tasks import register_task
-from fairseq.tasks.multilingual_translation import MultilingualTranslationTask
+from fairseq_org.tasks import register_task
+from fairseq_org.tasks.multilingual_translation import MultilingualTranslationTask
 
 from .loss.latent_depth import LatentLayersKLLoss, LatentLayersSparsityLoss
 

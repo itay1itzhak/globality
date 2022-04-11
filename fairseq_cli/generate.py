@@ -14,7 +14,6 @@ import os
 import sys
 from argparse import Namespace
 from itertools import chain
-
 import numpy as np
 import torch
 from fairseq import checkpoint_utils, options, scoring, tasks, utils
@@ -81,7 +80,6 @@ def _main(cfg: DictConfig, output_file):
     # Load dataset splits
     task = tasks.setup_task(cfg.task)
 
-
     # Set dictionaries
     try:
         src_dict = getattr(task, "source_dictionary", None)
@@ -103,7 +101,7 @@ def _main(cfg: DictConfig, output_file):
     )
 
     # loading the dataset should happen after the checkpoint has been loaded so we can give it the saved task config
-    task.load_dataset(cfg.dataset.gen_subset, task_cfg=saved_cfg.task)
+    task.load_dataset(cfg.dataset.gen_subset, task_cfg=saved_cfg.task, is_remove_eos=cfg.common.is_remove_eos)
 
     if cfg.generation.lm_path is not None:
         overrides["data"] = cfg.task.data
@@ -183,8 +181,70 @@ def _main(cfg: DictConfig, output_file):
 
     num_sentences = 0
     has_target = True
+    # itay
+    # with open('/private/home/itayitzhak/attn_weights2.txt', 'w+') as f:
+    #     pass
+    is_zero_out_attn_leakage = False  # check in functionality too!
+    if is_zero_out_attn_leakage:
+        prefix = "zero_attn_right_to_left_eos_free_"
+    else:
+        prefix = ""
+
+    from pathlib import Path
+    import re
+
+    checkpoint_num_match = re.search(r"\d+", str(cfg.model.path).split("/")[-1])
+    if checkpoint_num_match is None:
+        mod_name = str(cfg.model.path).split("/")[-2]
+    else:
+        mod_name = (
+            str(cfg.model.path).split("/")[-2] + "_cp_" + checkpoint_num_match.group()
+        )
+
+    if len(cfg['checkpoint'].save_attn_matricies) > 0:
+        folder_to_save_attn_mat = (
+            cfg['checkpoint'].save_attn_matricies
+            + prefix
+            + mod_name
+            + "_"
+            + "_".join(cfg.task["data"].split("/")[-6:])
+        )
+        try:
+            Path(folder_to_save_attn_mat).mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            print(e)
+        with open(f"{folder_to_save_attn_mat}/count.txt", "w+") as f:
+            f.write("0\n")
+    else:
+        folder_to_save_attn_mat = None
+    print(f"folder_to_save_attn_mat = {folder_to_save_attn_mat}")
+
+
+    if len(cfg['checkpoint'].save_emb_raw) > 0:
+        folder_to_save_emb_raw = (
+            "/checkpoint/itayitzhak/emb_raw/"
+            + mod_name
+            + "_"
+            + "_".join(cfg.task["data"].split("/")[-6:])
+        )
+        print(f"folder_to_save_emb_raw = {folder_to_save_emb_raw}")
+        try:
+            Path(folder_to_save_emb_raw).mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            print(e)
+        with open(f"{folder_to_save_emb_raw}/count.txt", "w+") as f:
+            f.write("0\n")
+    else:
+        folder_to_save_emb_raw = None
+
+
     wps_meter = TimeMeter()
     for sample in progress:
+        # itay
+        # with open('/private/home/itayitzhak/attn_weights2.txt', 'a') as f:
+        #     f.write("="*120+'\n')
+        #     f.write(str([src_dict[token] for token in sample['net_input']['src_tokens'][0]]))
+        #     f.write(str([tgt_dict[token] for token in sample['target'][0]])+'\n')
         sample = utils.move_to_cuda(sample) if use_cuda else sample
         if "net_input" not in sample:
             continue
@@ -204,6 +264,7 @@ def _main(cfg: DictConfig, output_file):
             sample,
             prefix_tokens=prefix_tokens,
             constraints=constraints,
+            folder_to_save_attn_mat=folder_to_save_attn_mat,
         )
         num_generated_tokens = sum(len(h[0]["tokens"]) for h in hypos)
         gen_timer.stop(num_generated_tokens)
@@ -316,10 +377,7 @@ def _main(cfg: DictConfig, output_file):
                             "A-{}\t{}".format(
                                 sample_id,
                                 " ".join(
-                                    [
-                                        ",".join(src_probs)
-                                        for src_probs in alignment
-                                    ]
+                                    [",".join(src_probs) for src_probs in alignment]
                                 ),
                             ),
                             file=output_file,
@@ -348,7 +406,10 @@ def _main(cfg: DictConfig, output_file):
 
                 # Score only the top hypothesis
                 if has_target and j == 0:
-                    if align_dict is not None or cfg.common_eval.post_process is not None:
+                    if (
+                        align_dict is not None
+                        or cfg.common_eval.post_process is not None
+                    ):
                         # Convert back to tokens for evaluation with unk replacement and/or without BPE
                         target_tokens = tgt_dict.encode_line(
                             target_str, add_if_not_exist=True
@@ -402,9 +463,12 @@ def cli_main():
     parser = options.get_generation_parser()
     # TODO: replace this workaround with refactoring of `AudioPretraining`
     parser.add_argument(
-        '--arch', '-a', metavar='ARCH', default="transformer",
-        help='Model architecture. For constructing tasks that rely on '
-             'model args (e.g. `AudioPretraining`)'
+        "--arch",
+        "-a",
+        metavar="ARCH",
+        default="transformer",
+        help="Model architecture. For constructing tasks that rely on "
+        "model args (e.g. `AudioPretraining`)",
     )
     args = options.parse_args_and_arch(parser)
     main(args)

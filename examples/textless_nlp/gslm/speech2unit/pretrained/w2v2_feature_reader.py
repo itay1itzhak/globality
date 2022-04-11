@@ -4,7 +4,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import torch
-import fairseq
+import fairseq_org
 import soundfile as sf
 
 
@@ -15,12 +15,12 @@ class Wav2VecFeatureReader:
     """
 
     def __init__(self, checkpoint_path, layer):
-        state = fairseq.checkpoint_utils.load_checkpoint_to_cpu(
+        state = fairseq_org.checkpoint_utils.load_checkpoint_to_cpu(
             checkpoint_path
         )
 
         w2v_args = state["args"]
-        self.task = fairseq.tasks.setup_task(w2v_args)
+        self.task = fairseq_org.tasks.setup_task(w2v_args)
         model = self.task.build_model(w2v_args)
         model.load_state_dict(state["model"], strict=True)
         model.eval()

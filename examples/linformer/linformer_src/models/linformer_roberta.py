@@ -9,9 +9,9 @@ Linformer: Self-Attention with Linear Complexity
 import logging
 
 import torch
-from fairseq import utils
-from fairseq.models import register_model, register_model_architecture
-from fairseq.models.roberta import (
+from fairseq_org import utils
+from fairseq_org.models import register_model, register_model_architecture
+from fairseq_org.models.roberta import (
     init_bert_params,
     roberta_base_architecture,
     roberta_large_architecture,

@@ -11,8 +11,8 @@ import unittest
 from collections import Counter
 from tempfile import NamedTemporaryFile, TemporaryDirectory
 
-from fairseq.data import Dictionary, indexed_dataset
-from fairseq.data.huffman import (
+from fairseq_org.data import Dictionary, indexed_dataset
+from fairseq_org.data.huffman import (
     HuffmanCodeBuilder,
     HuffmanCoder,
     HuffmanMMapIndexedDataset,

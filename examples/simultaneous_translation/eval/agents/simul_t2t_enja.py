@@ -5,7 +5,7 @@
 
 import os
 
-from fairseq import checkpoint_utils, tasks
+from fairseq_org import checkpoint_utils, tasks
 import sentencepiece as spm
 import torch
 

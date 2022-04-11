@@ -12,7 +12,7 @@ import os
 import subprocess
 from contextlib import redirect_stdout
 
-from fairseq import options
+from fairseq_org import options
 from fairseq_cli import generate, preprocess
 
 from examples.noisychannel import rerank_options, rerank_utils

@@ -8,27 +8,27 @@ from argparse import Namespace
 from pathlib import Path
 
 import torch
-from fairseq.data import (
+from fairseq_org.data import (
     encoders,
     Dictionary,
     ResamplingDataset,
     TransformEosLangPairDataset,
     ConcatDataset,
 )
-from fairseq.data.iterators import GroupedEpochBatchIterator
-from fairseq.data.audio.multi_modality_dataset import (
+from fairseq_org.data.iterators import GroupedEpochBatchIterator
+from fairseq_org.data.audio.multi_modality_dataset import (
     MultiModalityDataset,
     LangPairMaskDataset,
     ModalityDatasetItem,
 )
-from fairseq.data.audio.speech_to_text_dataset import SpeechToTextDataset, SpeechToTextDatasetCreator
-from fairseq.data.audio.speech_to_text_joint_dataset import (
+from fairseq_org.data.audio.speech_to_text_dataset import SpeechToTextDataset, SpeechToTextDatasetCreator
+from fairseq_org.data.audio.speech_to_text_joint_dataset import (
     S2TJointDataConfig,
     SpeechToTextJointDatasetCreator,
 )
-from fairseq.tasks import register_task
-from fairseq.tasks.speech_to_text import SpeechToTextTask
-from fairseq.tasks.translation import load_langpair_dataset
+from fairseq_org.tasks import register_task
+from fairseq_org.tasks.speech_to_text import SpeechToTextTask
+from fairseq_org.tasks.translation import load_langpair_dataset
 
 logger = logging.getLogger(__name__)
 LANG_TAG_TEMPLATE = "<lang:{}>"

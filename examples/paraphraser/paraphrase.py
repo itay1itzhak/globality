@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 
-from fairseq.models.transformer import TransformerModel
+from fairseq_org.models.transformer import TransformerModel
 
 
 logging.getLogger().setLevel(logging.INFO)

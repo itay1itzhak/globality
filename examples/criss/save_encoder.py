@@ -9,8 +9,8 @@ Translate pre-processed data with a trained model.
 
 import numpy as np
 import torch
-from fairseq import checkpoint_utils, options, progress_bar, tasks, utils
-from fairseq.sequence_generator import EnsembleModel
+from fairseq_org import checkpoint_utils, options, progress_bar, tasks, utils
+from fairseq_org.sequence_generator import EnsembleModel
 
 
 def get_avg_pool(

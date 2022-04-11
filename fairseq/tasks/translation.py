@@ -58,6 +58,7 @@ def load_langpair_dataset(
     shuffle=True,
     pad_to_multiple=1,
     prepend_bos_src=None,
+    is_remove_eos=False,
 ):
     def split_exists(split, src, tgt, lang, data_path):
         filename = os.path.join(data_path, "{}.{}-{}.{}".format(split, src, tgt, lang))
@@ -153,6 +154,9 @@ def load_langpair_dataset(
             )
 
     tgt_dataset_sizes = tgt_dataset.sizes if tgt_dataset is not None else None
+    # is_remove_eos = True
+    print(f"is_remove_eos={is_remove_eos}")
+
     return LanguagePairDataset(
         src_dataset,
         src_dataset.sizes,
@@ -167,6 +171,8 @@ def load_langpair_dataset(
         num_buckets=num_buckets,
         shuffle=shuffle,
         pad_to_multiple=pad_to_multiple,
+        remove_eos_from_source=is_remove_eos,  # itay remove-eos
+        append_bos=False,  # itay
     )
 
 
@@ -181,18 +187,10 @@ class TranslationConfig(FairseqDataclass):
         },
     )
     source_lang: Optional[str] = field(
-        default=None,
-        metadata={
-            "help": "source language",
-            "argparse_alias": "-s",
-        },
+        default=None, metadata={"help": "source language", "argparse_alias": "-s",},
     )
     target_lang: Optional[str] = field(
-        default=None,
-        metadata={
-            "help": "target language",
-            "argparse_alias": "-t",
-        },
+        default=None, metadata={"help": "target language", "argparse_alias": "-t",},
     )
     load_alignments: bool = field(
         default=False, metadata={"help": "load the binarized alignments"}
@@ -254,10 +252,7 @@ class TranslationConfig(FairseqDataclass):
     )
     eval_bleu_remove_bpe: Optional[str] = field(
         default=None,
-        metadata={
-            "help": "remove BPE before computing BLEU",
-            "argparse_const": "@@ ",
-        },
+        metadata={"help": "remove BPE before computing BLEU", "argparse_const": "@@ ",},
     )
     eval_bleu_print_samples: bool = field(
         default=False, metadata={"help": "print sample generations during validation"}
@@ -319,7 +314,9 @@ class TranslationTask(FairseqTask):
 
         return cls(cfg, src_dict, tgt_dict)
 
-    def load_dataset(self, split, epoch=1, combine=False, **kwargs):
+    def load_dataset(
+        self, split, epoch=1, combine=False, is_remove_eos=False, **kwargs
+    ):
         """Load a given dataset split.
 
         Args:
@@ -354,15 +351,20 @@ class TranslationTask(FairseqTask):
             num_buckets=self.cfg.num_batch_buckets,
             shuffle=(split != "test"),
             pad_to_multiple=self.cfg.required_seq_len_multiple,
+            is_remove_eos=is_remove_eos,
         )
 
     def build_dataset_for_inference(self, src_tokens, src_lengths, constraints=None):
+        is_remove_eos = False
+        print(f"in build_dataset_for_inference is_remove_eos={is_remove_eos}")
         return LanguagePairDataset(
             src_tokens,
             src_lengths,
             self.source_dictionary,
             tgt_dict=self.target_dictionary,
             constraints=constraints,
+            remove_eos_from_source=is_remove_eos,  # itay remove-eos
+            append_bos=False,  # itay
         )
 
     def build_model(self, cfg):
@@ -399,6 +401,7 @@ class TranslationTask(FairseqTask):
 
             def sum_logs(key):
                 import torch
+
                 result = sum(log.get(key, 0) for log in logging_outputs)
                 if torch.is_tensor(result):
                     result = result.cpu()
@@ -418,12 +421,15 @@ class TranslationTask(FairseqTask):
 
                 def compute_bleu(meters):
                     import inspect
+
                     try:
                         from sacrebleu.metrics import BLEU
+
                         comp_bleu = BLEU.compute_bleu
                     except ImportError:
                         # compatibility API for sacrebleu 1.x
                         import sacrebleu
+
                         comp_bleu = sacrebleu.compute_bleu
 
                     fn_sig = inspect.getfullargspec(comp_bleu)[0]
@@ -436,7 +442,7 @@ class TranslationTask(FairseqTask):
                         total=meters["_bleu_totals"].sum,
                         sys_len=meters["_bleu_sys_len"].sum,
                         ref_len=meters["_bleu_ref_len"].sum,
-                        **smooth
+                        **smooth,
                     )
                     return round(bleu.score, 2)
 

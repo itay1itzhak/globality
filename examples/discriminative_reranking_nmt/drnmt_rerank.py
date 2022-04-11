@@ -18,7 +18,7 @@ import numpy as np
 import sacrebleu
 import torch
 
-from fairseq import checkpoint_utils, options, utils
+from fairseq_org import checkpoint_utils, options, utils
 
 
 logger = logging.getLogger("fairseq_cli.drnmt_rerank")

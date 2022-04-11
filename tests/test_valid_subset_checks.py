@@ -3,9 +3,9 @@ import shutil
 import tempfile
 import unittest
 
-from fairseq import options
-from fairseq.dataclass.utils import convert_namespace_to_omegaconf
-from fairseq.data.data_utils import raise_if_valid_subsets_unintentionally_ignored
+from fairseq_org import options
+from fairseq_org.dataclass.utils import convert_namespace_to_omegaconf
+from fairseq_org.data.data_utils import raise_if_valid_subsets_unintentionally_ignored
 from .utils import create_dummy_data, preprocess_lm_data, train_language_model
 
 

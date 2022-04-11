@@ -7,10 +7,10 @@ import math
 from dataclasses import dataclass
 
 import torch.nn.functional as F
-from fairseq import metrics, utils
-from fairseq.criterions import register_criterion
-from fairseq.criterions.cross_entropy import CrossEntropyCriterion
-from fairseq.dataclass import FairseqDataclass
+from fairseq_org import metrics, utils
+from fairseq_org.criterions import register_criterion
+from fairseq_org.criterions.cross_entropy import CrossEntropyCriterion
+from fairseq_org.dataclass import FairseqDataclass
 from omegaconf import II
 
 

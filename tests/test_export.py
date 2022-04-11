@@ -9,10 +9,10 @@ import tempfile
 import unittest
 
 import torch
-from fairseq.data.dictionary import Dictionary
-from fairseq.models.transformer import TransformerModel
-from fairseq.modules import multihead_attention, sinusoidal_positional_embedding
-from fairseq.tasks.fairseq_task import LegacyFairseqTask
+from fairseq_org.data.dictionary import Dictionary
+from fairseq_org.models.transformer import TransformerModel
+from fairseq_org.modules import multihead_attention, sinusoidal_positional_embedding
+from fairseq_org.tasks.fairseq_task import LegacyFairseqTask
 
 
 DEFAULT_TEST_VOCAB_SIZE = 100

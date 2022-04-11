@@ -7,7 +7,7 @@ import argparse
 import random
 
 import numpy as np
-from fairseq import options
+from fairseq_org import options
 
 from examples.noisychannel import rerank, rerank_options
 

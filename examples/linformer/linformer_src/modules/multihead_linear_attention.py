@@ -8,9 +8,9 @@ from typing import Dict, Optional, Tuple
 
 import torch
 import torch.nn.functional as F
-from fairseq import utils
-from fairseq.incremental_decoding_utils import with_incremental_state
-from fairseq.modules.quant_noise import quant_noise
+from fairseq_org import utils
+from fairseq_org.incremental_decoding_utils import with_incremental_state
+from fairseq_org.modules.quant_noise import quant_noise
 from torch import Tensor, nn
 from torch.nn import Parameter
 

@@ -14,10 +14,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import autograd
 
-from fairseq import checkpoint_utils, utils
-from fairseq.dataclass import FairseqDataclass
-from fairseq.models import BaseFairseqModel, register_model
-from fairseq.modules import (
+from fairseq_org import checkpoint_utils, utils
+from fairseq_org.dataclass import FairseqDataclass
+from fairseq_org.models import BaseFairseqModel, register_model
+from fairseq_org.modules import (
     SamePad,
     TransposeLast,
 )

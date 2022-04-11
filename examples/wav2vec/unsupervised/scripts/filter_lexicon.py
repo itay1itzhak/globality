@@ -7,7 +7,7 @@
 import argparse
 import sys
 
-from fairseq.data import Dictionary
+from fairseq_org.data import Dictionary
 
 
 def get_parser():

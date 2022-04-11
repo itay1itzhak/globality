@@ -11,7 +11,7 @@ import contextlib
 import numpy as np
 import torch
 
-from fairseq.data import FairseqDataset, data_utils
+from fairseq_org.data import FairseqDataset, data_utils
 
 
 logger = logging.getLogger(__name__)

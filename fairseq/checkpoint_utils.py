@@ -7,7 +7,6 @@ import ast
 import collections
 import contextlib
 import logging
-import numpy as np
 import os
 import re
 import time
@@ -15,7 +14,10 @@ import traceback
 from collections import OrderedDict
 from typing import Any, Dict, Optional, Union
 
+import numpy as np
 import torch
+from omegaconf import DictConfig, OmegaConf, open_dict
+
 from fairseq.data import data_utils
 from fairseq.dataclass.configs import CheckpointConfig
 from fairseq.dataclass.utils import (
@@ -25,8 +27,6 @@ from fairseq.dataclass.utils import (
 from fairseq.distributed.fully_sharded_data_parallel import FSDP, has_FSDP
 from fairseq.file_io import PathManager
 from fairseq.models import FairseqDecoder, FairseqEncoder
-from omegaconf import DictConfig, open_dict, OmegaConf
-
 
 logger = logging.getLogger(__name__)
 
@@ -96,10 +96,7 @@ def save_checkpoint(cfg: CheckpointConfig, trainer, epoch_itr, val_loss):
 
         checkpoint_conds[
             "checkpoint.best_{}_{:.3f}{}{}.pt".format(
-                cfg.best_checkpoint_metric,
-                val_loss,
-                rand_sfx,
-                suffix
+                cfg.best_checkpoint_metric, val_loss, rand_sfx, suffix
             )
         ] = worst_best is None or is_better(val_loss, worst_best)
     checkpoint_conds[
@@ -361,13 +358,7 @@ def load_model_ensemble(
         strict and num_shards > 1
     ), "Cannot load state dict with strict=True and checkpoint shards > 1"
     ensemble, args, _task = load_model_ensemble_and_task(
-        filenames,
-        arg_overrides,
-        task,
-        strict,
-        suffix,
-        num_shards,
-        state,
+        filenames, arg_overrides, task, strict, suffix, num_shards, state,
     )
     return ensemble, args
 
@@ -600,13 +591,10 @@ def _upgrade_state_dict(state):
             state["args"].stop_min_lr = state["args"].min_lr
             del state["args"].min_lr
         # binary_cross_entropy / kd_binary_cross_entropy => wav2vec criterion
-        if (
-            hasattr(state["args"], "criterion")
-            and state["args"].criterion in [
-                "binary_cross_entropy",
-                "kd_binary_cross_entropy",
-            ]
-        ):
+        if hasattr(state["args"], "criterion") and state["args"].criterion in [
+            "binary_cross_entropy",
+            "kd_binary_cross_entropy",
+        ]:
             state["args"].criterion = "wav2vec"
         # remove log_keys if it's None (criteria will supply a default value of [])
         if hasattr(state["args"], "log_keys") and state["args"].log_keys is None:
@@ -653,7 +641,9 @@ def _upgrade_state_dict(state):
             ):
                 cfg.task.eval_wer_config.print_alignment = "hard"
             if "generation" in cfg and isinstance(cfg.generation.print_alignment, bool):
-                cfg.generation.print_alignment = "hard" if cfg.generation.print_alignment else None
+                cfg.generation.print_alignment = (
+                    "hard" if cfg.generation.print_alignment else None
+                )
             if (
                 "model" in cfg
                 and "w2v_args" in cfg.model
@@ -827,16 +817,16 @@ def load_ema_from_checkpoint(fpath):
     params_dict = collections.OrderedDict()
     new_state = None
 
-    with PathManager.open(fpath, 'rb') as f:
+    with PathManager.open(fpath, "rb") as f:
         new_state = torch.load(
             f,
             map_location=(
-                lambda s, _: torch.serialization.default_restore_location(s, 'cpu')
+                lambda s, _: torch.serialization.default_restore_location(s, "cpu")
             ),
         )
 
         # EMA model is stored in a separate "extra state"
-        model_params = new_state['extra_state']['ema']
+        model_params = new_state["extra_state"]["ema"]
 
         for key in list(model_params.keys()):
             p = model_params[key]
@@ -854,5 +844,5 @@ def load_ema_from_checkpoint(fpath):
                 "ema model weights, is this model trained with EMA?"
             )
 
-    new_state['model'] = params_dict
+    new_state["model"] = params_dict
     return new_state
