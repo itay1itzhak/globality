@@ -1,22 +1,53 @@
 {
     "configurations": [
         {
-            "name": "Slurm: Train/Eval",
+            "name": "Slurm: Eval",
             "type": "python",
             "request": "launch",
             "justMyCode": false,
             "env": {
                 "WANDB_API_KEY": "local-10f30b913d0512cf1a4f362ac6c9ffd2e3ceb574"
             },
-            "program": "/private/home/itayitzhak/fairseq/slurm_train.py",
-            "console": "integratedTerminal"
+            "program": "/private/home/itayitzhak/globality/slurm_train.py",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "Slurm: Save Attention matrices",
+            "type": "python",
+            "request": "launch",
+            "justMyCode": false,
+            "env": {
+                "WANDB_API_KEY": "local-10f30b913d0512cf1a4f362ac6c9ffd2e3ceb574"
+            },
+            "program": "/private/home/itayitzhak/globality/slurm_train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--train_eval_or_save_attn",
+                "save_attn"
+            ]
+        },
+        {
+            "name": "Slurm: Train",
+            "type": "python",
+            "request": "launch",
+            "justMyCode": false,
+            "env": {
+                "WANDB_API_KEY": "local-10f30b913d0512cf1a4f362ac6c9ffd2e3ceb574"
+            },
+            "program": "/private/home/itayitzhak/globality/slurm_train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--train_eval_or_save_attn",
+                "train"
+            ]
         },
         {
             "name": "Debug - Train",
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/train.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/train.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -70,7 +101,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/train.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/train.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -123,7 +154,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/dieuwkehupkes/mt-data/en-nl/opus-taboeta/data-bin-all",
@@ -141,7 +172,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/itayitzhak/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/synthetic/systematicity_synthetic_1_s3_s2/all",
@@ -163,7 +194,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/itayitzhak/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/synthetic/systematicity_synthetic_1_s3_s2/all",
@@ -182,7 +213,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/itayitzhak/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/synthetic/systematicity_synthetic_1_s3_s2/small",
@@ -201,7 +232,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/private/home/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/synthetic/systematicity_synthetic_1_s1_s2/small",
@@ -220,7 +251,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/private/home/dieuwkehupkes/nmt/compositional_mt/systematicity/s_np_vp/synthetic/systematicity_synthetic_1_np/all",
@@ -239,7 +270,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/itayitzhak/permuted_data/systematicity/s_conj/synthetic/systematicity_synthetic_1_s1_s2/small",
@@ -258,7 +289,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/private/home/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/synthetic/systematicity_synthetic_1_s3_s2/all",
@@ -277,7 +308,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/checkpoint/itayitzhak/permuted_data/systematicity/s_conj/synthetic/systematicity_synthetic_1_s1_s2_3gram/all",
@@ -296,7 +327,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/private/home/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/semi_natural/systematicity_semi_natural_1_s3_s2/tiny",
@@ -316,7 +347,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": false,
-            "program": "/private/home/itayitzhak/fairseq/fairseq_cli/generate.py",
+            "program": "/private/home/itayitzhak/globality/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
                 "/private/home/dieuwkehupkes/nmt/compositional_mt/systematicity/s_conj/natural/systematicity_natural_1_s3_s2/tiny",
@@ -366,7 +397,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -391,7 +422,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -425,7 +456,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -458,7 +489,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -491,7 +522,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -526,7 +557,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -559,7 +590,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -594,7 +625,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -627,7 +658,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -660,7 +691,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -693,7 +724,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -726,7 +757,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -759,7 +790,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -792,7 +823,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -825,7 +856,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -860,7 +891,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -887,7 +918,7 @@
                 "--data_type",
                 "remove_eos_not_permuted",
                 "--cp",
-                "1-10",
+                "1-17",
             ]
         },
         {
@@ -895,7 +926,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -927,7 +958,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -951,7 +982,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/multi_model_compute_globalities.py",
+            "program": "/private/home/itayitzhak/globality/globality/multi_model_compute_globalities.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -983,7 +1014,7 @@
             "type": "python",
             "request": "launch",
             "justMyCode": true,
-            "program": "/private/home/itayitzhak/fairseq/globality/plotting.py",
+            "program": "/private/home/itayitzhak/globality/globality/plotting.py",
             "console": "integratedTerminal",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
